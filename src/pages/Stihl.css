@@ -1,0 +1,47 @@
+.stihl-img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.stihl-page {
+  background: #fff;
+  color: #ff6600;
+  min-height: 80vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+
+.stihl-page h1 {
+  color: #ff6600;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: inherit;
+}
+
+.stihl-desc {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ff6600;
+  font-family: inherit;
+}
+
+.stihl-contact {
+  font-size: 1.1rem;
+  color: #ff6600;
+  text-align: center;
+  background: #fff3e6;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.08);
+  font-family: inherit;
+}
