@@ -1,6 +1,8 @@
 import './Stihl.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Stihl() {
+  const navigate = useNavigate();
   return (
     <div className="stihl-page">
       <img src="/stihl.png" alt="STIHL" className="stihl-img" />
@@ -21,7 +23,7 @@ export default function Stihl() {
             et profitez d'un jardin impeccable grâce à notre service de Tondeuse Robot&nbsp;!
           </p>
         </div>
-        <button className="stihl-btn">En savoir plus</button>
+        <button className="stihl-btn" onClick={() => navigate('/contact')}>En savoir plus</button>
       </div>
     </div>
   );
