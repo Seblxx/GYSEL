@@ -1,8 +1,72 @@
+.stihl-btn {
+  margin-top: 2rem;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+
+.stihl-btn:hover {
+  background: #e65c00;
+}
+.stihl-content {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stihl-info-block {
+  background: #fff3e6;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stihl-info-title {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.stihl-info-text {
+  color: #ff6600;
+  font-size: 1.08rem;
+  text-align: center;
+  margin: 0;
+  font-family: inherit;
+}
+
+.stihl-highlight {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+  text-align: center;
+  font-family: inherit;
+}
 .stihl-img {
   max-width: 220px;
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.1rem;
   display: block;
 }
 
