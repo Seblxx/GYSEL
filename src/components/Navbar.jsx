@@ -11,6 +11,7 @@ export default function Navbar() {
     { to: '/', label: 'Accueil' },
     { to: '/services', label: 'Services' },
     { to: '/ineige', label: 'iNeige' },
+    { to: '/stihl', label: 'STIHL' },
     { to: '/contact', label: 'Contact' },
   ]
 
