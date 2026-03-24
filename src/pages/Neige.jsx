@@ -49,7 +49,7 @@ export default function Neige() {
         <div className="neige-hero-overlay" />
         <div className="container neige-hero-content">
           <div className="logo-ineige ">
-            <img src="ineige-web.png" alt="Logo ineige" />
+            <img src="/ineige-web.png" alt="Logo ineige" />
           </div>
           <h1>Pelleter est une chose du passé.</h1>
           <p>
