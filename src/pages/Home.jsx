@@ -37,13 +37,11 @@ export default function Home() {
     <div className="home">
       {/* HERO */}
       <section className="hero">
+        <video className="hero-video" autoPlay loop muted playsInline>
+          <source src="/79998-570766625_medium.mp4" type="video/mp4" />
+        </video>
         <div className="hero-overlay" />
         <div className="hero-content container">
-          <h1 className="hero-title">
-            <span className="hero-pre">LE GROUPE</span>
-            GYSEL
-            <span className="hero-sub">#1 EN ESTRIE</span>
-          </h1>
           <p className="hero-quote">
             "Cessez de regarder chez le voisin pour trouver un gazon parfait !"
           </p>

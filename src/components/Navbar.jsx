@@ -1,11 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
 import './Navbar.css'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const { pathname } = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const links = [
     { to: '/', label: 'Accueil' },
@@ -18,15 +27,17 @@ export default function Navbar() {
   const isHiver = pathname === '/ineige'
 
   return (
-     <nav className={`navbar ${isHiver ? 'navbar-hiver' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isHiver ? 'navbar-hiver' : ''}`}>
       <div className="navbar-inner container">
+        {/* Centered logo text - only visible before scroll */}
+        <div className="navbar-center-logo">
+          <span className="logo-prefix">LE GROUPE</span>
+          <span className="logo-name">GYSEL</span>
+        </div>
+
+        {/* Left logo image - only visible after scroll */}
         <Link to="/" className="navbar-logo">
           <img src="/logo-GG-blanc.png" alt="Le Groupe Gysel" />
-          <div className="logo-text">
-            <span className="logo-title">LE GROUPE</span>
-            <span className="logo-name">GYSEL</span>
-            <span className="logo-sub">#1 EN ESTRIE</span>
-          </div>
         </Link>
 
         <ul className={`navbar-links ${open ? 'open' : ''}`}>

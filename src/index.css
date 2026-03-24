@@ -113,3 +113,32 @@ h1, h2, h3, h4 { line-height: 1.2; }
   .section-title { font-size: 1.8rem; }
   .container { padding: 0 16px; }
 }
+
+/* ===== ENTRANCE ANIMATIONS ===== */
+.app-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.app-content.revealed {
+  opacity: 1;
+}
+
+.app-content.revealed main > * {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.app-content.revealed section {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
