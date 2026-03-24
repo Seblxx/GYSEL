@@ -5,7 +5,25 @@
   right: 0;
   z-index: 1000;
   background: var(--green-dark);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-hiver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1a4f5a;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-hiver .btn-phone {
+  background-color: #3a7a8a;
+}
+
+.navbar-hiver .btn-phone:hover {
+  background-color: #1f5d69;
 }
 
 .navbar-inner {
@@ -48,7 +66,7 @@
 }
 
 .logo-sub {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.55rem;
   font-weight: 500;
   letter-spacing: 1.5px;
@@ -71,14 +89,14 @@
 
 .navbar-links a:hover,
 .navbar-links a.active {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .btn-phone {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--green-light) !important;
+  background: var(--green-light);
   color: var(--white) !important;
   padding: 10px 20px !important;
   border-radius: 50px !important;
@@ -88,7 +106,7 @@
 }
 
 .btn-phone:hover {
-  background: var(--green-pale) !important;
+  background: var(--green-pale);
   transform: translateY(-1px);
 }
 

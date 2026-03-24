@@ -1,43 +1,33 @@
 /* ===== NEIGE HERO ===== */
 .neige-hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #1a3a4a 0%, #2a5a6a 40%, #3a7a8a 100%);
-  overflow: hidden;
-}
-
-.neige-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 60%);
-  pointer-events: none;
+    linear-gradient(rgba(10, 30, 40, 0.75), rgba(10, 30, 40, 0.9)),
+    url("/images/background-image-ineige.jpg") center/cover no-repeat;
+  overflow: hidden;
 }
 
 .neige-hero-content {
   position: relative;
   z-index: 2;
   padding: 160px 24px 100px;
-  max-width: 700px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.neige-badge {
+.logo-ineige {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.15);
   padding: 8px 20px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 24px;
+  border-radius: 20px;
+  margin-bottom: 50px;
   backdrop-filter: blur(5px);
+  width: 25%;
 }
 
 .neige-hero h1 {
@@ -50,7 +40,7 @@
 
 .neige-hero p {
   font-size: 1.2rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 32px;
   line-height: 1.7;
 }
@@ -61,22 +51,25 @@
   flex-wrap: wrap;
 }
 
-.btn-neige-outline {
+.btn-primary-hiver {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background: #3a7a8a;
   color: var(--white);
   padding: 14px 32px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
-  border: 2px solid rgba(255,255,255,0.5);
   transition: all 0.3s ease;
+  border: 2px solid #3a7a8a;
 }
 
-.btn-neige-outline:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: var(--white);
+.btn-primary-hiver:hover {
+  background: #1a4f5a;
+  border-color: #1a4f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(26, 79, 90, 0.3);
 }
 
 /* ===== FEATURES ===== */
@@ -89,9 +82,23 @@
   margin-bottom: 50px;
 }
 
+.section-title-hiver {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #3a7a8a;
+  margin-bottom: 16px;
+}
+
+.section-subtitle-hiver {
+  font-size: 1.15rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: auto;
+}
+
 .neige-features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
@@ -106,7 +113,7 @@
 
 .neige-feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(26,58,74,0.12);
+  box-shadow: 0 12px 40px rgba(26, 58, 74, 0.12);
   border-color: #3a7a8a;
 }
 
@@ -135,6 +142,10 @@
   line-height: 1.6;
 }
 
+.feature-btn {
+  margin-top: 25px;
+}
+
 /* ===== ADVANTAGES ===== */
 .neige-advantages {
   background: #f0f6f8;
@@ -143,7 +154,7 @@
 
 .neige-adv-inner {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 60px;
   align-items: center;
 }
@@ -175,11 +186,23 @@
   font-weight: 500;
   color: #1a3a4a;
   font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .neige-adv-list li svg {
-  color: #3a7a8a;
-  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.neige-adv-list li:hover {
+  background-color: #3a7a8a;
+  color: white;
+}
+
+.neige-adv-list li:hover svg {
+  color: white;
 }
 
 .neige-adv-visual {
@@ -188,29 +211,20 @@
   justify-content: center;
 }
 
-.neige-big-snowflake {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #1a3a4a, #3a7a8a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  box-shadow: 0 20px 60px rgba(26,58,74,0.25);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+.neige-col-image img {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #1a4f5a;
 }
 
 /* ===== CTA ===== */
 .neige-cta {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #1a3a4a, #2a5a6a);
+  padding: 150px 0;
   color: var(--white);
+  background:
+    linear-gradient(rgba(10, 30, 40, 0.75), rgba(10, 30, 40, 0.9)),
+    url("/images/background-cta.jpg") center/cover no-repeat;
+  overflow: hidden;
 }
 
 .neige-cta-icon {

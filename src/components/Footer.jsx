@@ -1,14 +1,21 @@
-import { Link } from 'react-router-dom'
-import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react'
-import './Footer.css'
+import { Link, useLocation } from "react-router-dom";
+import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import "./Footer.css";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  const isHiver = pathname === "/ineige";
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${isHiver ? "footer-hiver" : ""}`}>
       <div className="footer-top">
         <div className="container footer-grid">
           <div className="footer-brand">
-            <img src="/logo-GG-blanc.png" alt="Le Groupe Gysel" className="footer-logo" />
+            <img
+              src="/logo-GG-blanc.png"
+              alt="Le Groupe Gysel"
+              className="footer-logo"
+            />
             <p className="footer-tagline">
               Domptez votre terrain, devenez la fierté de l'Estrie.
             </p>
@@ -17,20 +24,36 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Navigation</h4>
             <ul>
-              <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/ineige">iNeige</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li>
+                <Link to="/">Accueil</Link>
+              </li>
+              <li>
+                <Link to="/services">Services</Link>
+              </li>
+              <li>
+                <Link to="/ineige">iNeige</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
           <div className="footer-col">
             <h4>Services populaires</h4>
             <ul>
-              <li><Link to="/services">Traitement de pelouse</Link></li>
-              <li><Link to="/services">Tonte de pelouse</Link></li>
-              <li><Link to="/services">Terreautage</Link></li>
-              <li><Link to="/services">Hydro-ensemencement</Link></li>
+              <li>
+                <Link to="/services">Traitement de pelouse</Link>
+              </li>
+              <li>
+                <Link to="/services">Tonte de pelouse</Link>
+              </li>
+              <li>
+                <Link to="/services">Terreautage</Link>
+              </li>
+              <li>
+                <Link to="/services">Hydro-ensemencement</Link>
+              </li>
             </ul>
           </div>
 
@@ -51,10 +74,20 @@ export default function Footer() {
               </li>
             </ul>
             <div className="footer-socials">
-              <a href="https://www.facebook.com/groupegysel" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/groupegysel"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
                 <ExternalLink size={20} />
               </a>
-              <a href="https://www.instagram.com/groupe_gysel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/groupe_gysel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <ExternalLink size={20} />
               </a>
             </div>
@@ -64,9 +97,12 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Le Groupe Gysel. Tous droits réservés.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Le Groupe Gysel. Tous droits
+            réservés.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -14,8 +14,10 @@ export default function Navbar() {
     { to: '/contact', label: 'Contact' },
   ]
 
+  const isHiver = pathname === '/ineige'
+
   return (
-    <nav className="navbar">
+     <nav className={`navbar ${isHiver ? 'navbar-hiver' : ''}`}>
       <div className="navbar-inner container">
         <Link to="/" className="navbar-logo">
           <img src="/logo-GG-blanc.png" alt="Le Groupe Gysel" />
