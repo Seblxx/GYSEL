@@ -35,6 +35,9 @@ export default function Footer() {
                 <Link to="/ineige">{t('nav.ineige')}</Link>
               </li>
               <li>
+                <Link to="/stihl">{t('nav.stihl')}</Link>
+              </li>
+              <li>
                 <Link to="/contact">{t('nav.contact')}</Link>
               </li>
             </ul>
