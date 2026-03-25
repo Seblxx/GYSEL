@@ -26,7 +26,7 @@
 }
 
 .colab-brand {
-  background-color: #f0f7ec;
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
