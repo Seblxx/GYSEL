@@ -96,6 +96,7 @@
   text-align: center;
   color: #ff6600; /* make subtitle/lead text orange */
   font-family: var(--font-main);
+  font-weight: 700; /* make highlight bold */
   max-width: 760px;
 }
 
