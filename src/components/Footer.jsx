@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -95,7 +96,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Facebook"
               >
-                <ExternalLink size={20} />
+                <FaFacebookF size={20} />
               </a>
               <a
                 href="https://www.instagram.com/groupe_gysel/"
@@ -103,7 +104,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <ExternalLink size={20} />
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>
