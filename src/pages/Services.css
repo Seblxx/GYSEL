@@ -86,7 +86,7 @@
 
 .gallery-item {
   position: relative;
-  aspect-ratio: 1.2;
+  aspect-ratio: 1.8;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
