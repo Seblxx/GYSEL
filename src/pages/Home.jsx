@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Leaf, Droplets, Scissors, Snowflake, Star, Shield, Clock } from 'lucide-react'
+import { ArrowRight, Leaf, Droplets, Scissors, Snowflake } from 'lucide-react'
 import './Home.css'
 
 const highlights = [
@@ -23,13 +23,6 @@ const highlights = [
     title: 'Déneigement iNeige',
     desc: 'Pelleter est une chose du passé. Découvrez iNeige.',
   },
-]
-
-const stats = [
-  { number: '10+', label: 'Années d\'expérience' },
-  { number: '1000+', label: 'Clients satisfaits' },
-  { number: '#1', label: 'En Estrie' },
-  { number: '100%', label: 'Satisfaction garantie' },
 ]
 
 export default function Home() {
@@ -58,39 +51,26 @@ export default function Home() {
 
       {/* INTRO */}
       <section className="intro">
-        <div className="container intro-inner">
-          <div className="intro-text">
-            <h2 className="section-title">Spécialiste en espaces verts</h2>
-            <p>
-              Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité,
-              son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit
-              le service que vous recherchez, avec nous vous aurez la garantie d'une entière satisfaction.
-            </p>
-            <p>
-              Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet
-              avec le professionnalisme attendu par nos clients.
-            </p>
-            <Link to="/services" className="btn-primary" style={{ marginTop: 24 }}>
-              Découvrir nos services
-            </Link>
+        <div className="intro-overlay" />
+        <div className="container intro-content">
+          <div className="intro-badge">
+            <img src="/estrie.png" alt="LE #1 EN ESTRIE" />
           </div>
-          <div className="intro-visual">
-            <div className="intro-card">
-              <Shield size={40} />
-              <h3>Professionnalisme</h3>
-              <p>Des experts certifiés à votre service</p>
-            </div>
-            <div className="intro-card">
-              <Star size={40} />
-              <h3>Qualité</h3>
-              <p>Des résultats qui dépassent vos attentes</p>
-            </div>
-            <div className="intro-card">
-              <Clock size={40} />
-              <h3>Fiabilité</h3>
-              <p>Ponctualité et service régulier garanti</p>
-            </div>
-          </div>
+          <h2 className="intro-title">Spécialiste en espaces verts.</h2>
+          <p className="intro-text">
+            Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité,
+            son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit
+            le service que vous recherchez et vos attentes, avec nous vous aurez la garantie
+            d'une entière satisfaction.
+          </p>
+          <p className="intro-text">
+            Notre équipe est prête à répondre à toutes les demandes,
+            et gère chaque projet avec le professionnalisme attendu
+            par nos clients.
+          </p>
+          <Link to="/services" className="btn-intro">
+            Découvrir nos services
+          </Link>
         </div>
       </section>
 
@@ -119,18 +99,6 @@ export default function Home() {
               Voir tous les services <ArrowRight size={18} />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* STATS */}
-      <section className="stats">
-        <div className="container stats-grid">
-          {stats.map((s, i) => (
-            <div key={i} className="stat-item">
-              <span className="stat-number">{s.number}</span>
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 
