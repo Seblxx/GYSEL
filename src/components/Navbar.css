@@ -10,18 +10,18 @@
 }
 
 .navbar.scrolled {
-  background: rgba(58,107,46,0.95);
+  background: rgba(58, 107, 46, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
   padding: 12px 0;
 }
 
 .navbar-hiver.scrolled {
-  background: rgba(26,79,90,0.95);
+  background: rgba(26, 79, 90, 0.95);
 }
 
 .navbar-stihl.scrolled {
-  background: rgba(255,95,21,0.95);
+  background: rgba(255, 95, 21, 0.95);
 }
 
 .navbar-hiver .btn-phone {
@@ -167,6 +167,8 @@
 @media (max-width: 900px) {
   .navbar {
     background: var(--green-dark);
+    right: 0;
+    padding: 100px 0;
   }
 
   .navbar-hiver {
@@ -194,18 +196,25 @@
 
   .navbar-links {
     position: fixed;
-    top: 72px;
+    top: 70px;
     left: 0;
     right: 0;
-    bottom: 0;
     background: var(--green-dark);
     flex-direction: column;
     justify-content: flex-start;
     padding: 32px 24px;
-    gap: 4px;
+    gap: 20px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     opacity: 1;
+  }
+  
+  .navbar-hiver .navbar-links {
+    background: #1a4f5a;
+  }
+
+  .navbar-stihl .navbar-links {
+    background: #ff5f15;
   }
 
   .navbar-links.open {
