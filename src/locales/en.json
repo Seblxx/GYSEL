@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "ineige": "iNeige",
+    "stihl": "STIHL",
+    "contact": "Contact"
+  },
+  "phone": "819-348-9513",
+  "footer": {
+    "tagline": "Tame your terrain, become the pride of Estrie.",
+    "navigationTitle": "Navigation",
+    "servicesTitle": "Popular services",
+    "contactTitle": "Contact us",
+    "address": "7702 chemin de St-Élie, Sherbrooke, QC J1R 0C4",
+    "email": "info@groupegysel.com"
+  },
+  "home": {
+    "hero": {
+      "quote": "Stop looking at the neighbor for the perfect lawn!",
+      "cta1": "Discover our services",
+      "cta2": "Free estimate"
+    },
+    "highlightsTitle": "Our experts for your home or business",
+    "highlightsSubtitle": "Comprehensive services to transform and maintain your outdoor spaces.",
+    "highlights": [
+      { "title": "Lawn treatment", "desc": "A green, healthy lawn thanks to our specialized treatments." },
+      { "title": "Hydro-seeding", "desc": "3x cheaper than sod. The key to the perfect lawn." },
+      { "title": "Mowing & Maintenance", "desc": "Weekly mowing and professional landscape maintenance." },
+      { "title": "iNeige snow removal", "desc": "Shoveling is a thing of the past. Discover iNeige." }
+    ],
+    "stats": [
+      { "number": "10+", "label": "Years of experience" },
+      { "number": "1000+", "label": "Satisfied customers" }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Get a free estimate for all your green space projects.",
+    "form": {
+      "title": "Free estimate",
+      "name": "Your name *",
+      "phone": "Phone number *",
+      "email": "Email *",
+      "service": "Required services",
+      "selectService": "Select a service",
+      "address": "Address",
+      "city": "City",
+      "details": "Details",
+      "submit": "Submit",
+      "success": "Thanks! Your request has been sent. We will contact you shortly."
+    },
+    "servicesOptions": [
+      "Lawn mowing",
+      "Spring cleaning",
+      "Fall cleanup",
+      "Lawn treatment",
+      "Lawn repair",
+      "Sod installation",
+      "Hydro-seeding",
+      "Landscape maintenance",
+      "Hedge trimming",
+      "Earthmoving and preparation",
+      "Mini-excavation",
+      "Paver and wall installation",
+      "Excavator rental with operator",
+      "Excavator rental without operator",
+      "Snow removal"
+    ]
+  },
+  "neige": {
+    "hero": {
+      "title": "Shoveling is a thing of the past.",
+      "desc": "Groupe Gysel and its service iNeige embody the word PEACE OF MIND. We take care of your driveway, parking lot, commercial space and parking areas.",
+      "assurance": "Be assured of fast, effective and meticulous snow removal",
+      "cta": "Get a quote"
+    },
+    "featuresTitle": "Snow removal services",
+    "featuresSubtitle": "Tailored solutions to get through winter worry-free.",
+    "features": [
+      { "title": "Residential snow removal", "desc": "Trust the leader in Estrie. EXEMPLARY SERVICE We have the best techniques, the best team and the best equipment." },
+      { "title": "Multi-unit snow removal", "desc": "Relieve yourself by entrusting your snow removal to us. Perfect parking for your building." },
+      { "title": "Your snow solution", "desc": "Snow is mother nature. Snow removal is us." },
+      { "title": "Abrasive spreading", "desc": "The key to facing winter. Winter safety guaranteed thanks to our abrasive spreading service." }
+    ],
+    "advantages": [
+      "Fast and reliable service",
+      "Professional equipment",
+      "Advantageous seasonal packages",
+      "Full coverage in Estrie",
+      "Experienced team",
+      "De-icing included"
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "desc": "Comprehensive solutions for the maintenance and landscaping of your outdoor spaces. Residential and commercial in Estrie.",
+    "list": [
+      { "title": "Lawn treatment", "desc": "A problem with your lawn? We are the specialists. For a neat, healthy appearance." },
+      { "title": "High-performance topdressing", "desc": "Transform your soil! Don't replace your lawn, regenerate it deeply with our biological topdressing." },
+      { "title": "Hydro-seeding", "desc": "The key to the perfect lawn. 3x cheaper! We have the best techniques to repair and seed all surfaces." },
+      { "title": "Landscape maintenance and installation", "desc": "Design, installation and maintenance of outdoor spaces: gardens, lawns, trees, plants and hedge trimming." },
+      { "title": "Robot mower", "desc": "Quality installation for your robot mower by our team of experts." },
+      { "title": "Spring cleaning", "desc": "Start the season off right with our motivated team!" },
+      { "title": "Fall cleanup", "desc": "Relieve yourself of a task by entrusting us with your winterization." },
+      { "title": "Lawn mowing", "desc": "Weekly mowing, debris cleanup, fresh-cut grass smell guaranteed!" },
+      { "title": "Parking lot cleaning", "desc": "Erase winter, restore prestige to your space. Bring your parking lot back to life after a tough winter." },
+      { "title": "Lawn repair", "desc": "Tame your terrain! Our specialized equipment is designed to repair your lawn." },
+      { "title": "Earthmoving and excavation", "desc": "Paver and wall installation, excavator rental with or without operator." }
+    ]
+    ,
+    "cta": {
+      "title": "Ready to transform your terrain?",
+      "desc": "Contact us for a free assessment of your needs.",
+      "btn": "Request an estimate"
+    }
+  },
+  "stihl": {
+    "title": "ROBOTIC MOWER",
+    "highlight": "Mowing will be a thing of the past!",
+    "installationTitle": "Professional installation",
+    "installationDesc": "Need a quality installation for your robot mower? Trust our team of experts to take care of everything!",
+    "contactTitle": "Contact us",
+    "contactDesc": "Contact us today to learn more about our offers and enjoy a pristine garden thanks to our Robot Mower service!",
+    "btn": "Learn more"
+  }
+}

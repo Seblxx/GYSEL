@@ -8,40 +8,19 @@ import {
   Shield,
 } from "lucide-react";
 import "./Neige.css";
-
-const features = [
-  {
-    icon: <Truck size={32} />,
-    title: "Déneigement résidentiel",
-    desc: `Faites confiance au leader en Estrie.\nSERVICE EXEMPLAIRE\nNous avons les meilleures techniques, la meilleure équipe et les meilleurs équipements.`,
-  },
-  {
-    icon: <Shield size={32} />,
-    title: "Déneigement multi-logements",
-    desc: `Déchargez-vous d'une tâche en nous confiant votre déneigement.\nStationnement parfait pour votre immeuble.`,
-  },
-  {
-    icon: <Clock size={32} />,
-    title: "Votre solution déneigement",
-    desc: `La neige, c'est dame nature. Le déneigement, c'est nous.`,
-  },
-  {
-    icon: <Truck size={32} />,
-    title: "Épandage d'abrasif",
-    desc: `La clé pour affronter l'hiver.\nSécurité hivernale garantie grâce à notre service d'épandage d'abrasif.`,
-  },
-];
-
-const advantages = [
-  "Service rapide et fiable",
-  "Équipement professionnel",
-  "Forfaits saisonniers avantageux",
-  "Couverture complète en Estrie",
-  "Équipe expérimentée",
-  "Déglaçage inclus",
-];
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Neige() {
+  const { t } = useLanguage()
+
+  const features = (t('neige.features') || []).map((f, i) => ({
+    icon: [<Truck size={32} />, <Shield size={32} />, <Clock size={32} />, <Truck size={32} />][i] || <Truck size={32} />,
+    title: f.title,
+    desc: f.desc,
+  }))
+
+  const advantages = t('neige.advantages') || []
+
   return (
     <div className="neige-page">
       {/* HERO */}
@@ -51,22 +30,15 @@ export default function Neige() {
           <div className="logo-ineige ">
             <img src="/ineige-web.png" alt="Logo ineige" />
           </div>
-          <h1>Pelleter est une chose du passé.</h1>
-          <p>
-            Le Groupe Gysel et son nouveau service iNeige sont l'essence même du
-            mot QUIÉTUDE. Nous nous occupons de votre entrée de cour, votre
-            stationnement, votre espace commercial et de votre parc de
-            stationnements.
-          </p>
+          <h1>{t('neige.hero.title')}</h1>
+          <p>{t('neige.hero.desc')}</p>
 
           <p>
-            <strong>
-              Soyez assurés d'un déneigement rapide, efficace et minutuieux
-            </strong>
+            <strong>{t('neige.hero.assurance')}</strong>
           </p>
           <div className="neige-hero-btns">
             <Link to="/contact" className="btn-primary-hiver">
-              Obtenir une soumission <ArrowRight size={18} />
+              {t('neige.hero.cta')} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -76,10 +48,8 @@ export default function Neige() {
       <section className="neige-features">
         <div className="container">
           <div className="neige-features-header">
-            <h2 className="section-title-hiver">Services de déneigement</h2>
-            <p className="section-subtitle-hiver">
-              Des solutions adaptées pour passer l'hiver sans souci.
-            </p>
+            <h2 className="section-title-hiver">{t('neige.featuresTitle')}</h2>
+            <p className="section-subtitle-hiver">{t('neige.featuresSubtitle')}</p>
           </div>
           <div className="neige-features-grid">
             {features.map((f, i) => (
@@ -91,7 +61,7 @@ export default function Neige() {
             ))}
           </div>
           <a href="/contact" className="btn-primary-hiver feature-btn">
-            Obtenir une soumission
+            {t('neige.hero.cta')}
           </a>
         </div>
       </section>

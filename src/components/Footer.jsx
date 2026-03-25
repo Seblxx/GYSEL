@@ -1,77 +1,70 @@
 import { Link, useLocation } from "react-router-dom";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import "./Footer.css";
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Footer() {
   const { pathname } = useLocation();
   const isHiver = pathname === "/ineige";
   const isStihl = pathname === "/stihl";
+  const { t } = useLanguage()
 
   return (
     <footer className={`footer ${isHiver ? "footer-hiver" : ""} ${isStihl ? "footer-stihl" : ""}`}>
       <div className="footer-top">
         <div className="container footer-grid">
-          <div className="footer-brand">
+            <div className="footer-brand">
             <img
               src="/logo-GG-blanc.png"
               alt="Le Groupe Gysel"
               className="footer-logo"
             />
-            <p className="footer-tagline">
-              Domptez votre terrain, devenez la fierté de l'Estrie.
-            </p>
+            <p className="footer-tagline">{t('footer.tagline')}</p>
           </div>
 
           <div className="footer-col">
-            <h4>Navigation</h4>
+            <h4>{t('footer.navigationTitle')}</h4>
             <ul>
               <li>
-                <Link to="/">Accueil</Link>
+                <Link to="/">{t('nav.home')}</Link>
               </li>
               <li>
-                <Link to="/services">Services</Link>
+                <Link to="/services">{t('nav.services')}</Link>
               </li>
               <li>
-                <Link to="/ineige">iNeige</Link>
+                <Link to="/ineige">{t('nav.ineige')}</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">{t('nav.contact')}</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Services populaires</h4>
+            <h4>{t('footer.servicesTitle')}</h4>
             <ul>
-              <li>
-                <Link to="/services">Traitement de pelouse</Link>
-              </li>
-              <li>
-                <Link to="/services">Tonte de pelouse</Link>
-              </li>
-              <li>
-                <Link to="/services">Terreautage</Link>
-              </li>
-              <li>
-                <Link to="/services">Hydro-ensemencement</Link>
-              </li>
+              {t('services.list').slice(0,4).map((s, i) => (
+                <li key={i}>
+                  <Link to="/services">{s.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Nous joindre</h4>
+            <h4>{t('footer.contactTitle')}</h4>
             <ul className="footer-contact">
               <li>
                 <MapPin size={16} />
-                <span>7702 chemin de St-Élie, Sherbrooke, QC J1R 0C4</span>
+                <span>{t('footer.address')}</span>
               </li>
               <li>
                 <Phone size={16} />
-                <a href="tel:819-348-9513">819-348-9513</a>
+                <a href={`tel:${t('phone')}`}>{t('phone')}</a>
               </li>
               <li>
                 <Mail size={16} />
-                <a href="mailto:info@groupegysel.com">info@groupegysel.com</a>
+                <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
               </li>
             </ul>
             <div className="footer-socials">

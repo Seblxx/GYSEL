@@ -1,26 +1,13 @@
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, ExternalLink, Send } from 'lucide-react'
 import './Contact.css'
-
-const serviceOptions = [
-  'Tonte de pelouse',
-  'Nettoyage printemps',
-  'Nettoyage automne',
-  'Traitement de pelouse',
-  'Réparation de pelouse',
-  'Pose de tourbe',
-  'Hydro-ensemencement',
-  'Entretien paysager',
-  'Taillage de haies',
-  'Terrassement et préparation',
-  'Mini-excavation',
-  'Pose de muret et pavé',
-  'Location de pelle mécanique avec opérateur',
-  'Location de pelle mécanique sans opérateur',
-  'Déneigement',
-]
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
+
+  const serviceOptions = t('contact.servicesOptions') || []
+
   const [form, setForm] = useState({
     name: '', phone: '', email: '', service: '', address: '', city: '', details: ''
   })
@@ -31,7 +18,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert('Merci ! Votre demande a été envoyée. Nous vous contacterons sous peu.')
+    alert(t('contact.form.success'))
     setForm({ name: '', phone: '', email: '', service: '', address: '', city: '', details: '' })
   }
 
@@ -40,8 +27,8 @@ export default function Contact() {
       {/* HERO */}
       <section className="contact-hero">
         <div className="container">
-          <h1>Nous joindre</h1>
-          <p>Obtenez une évaluation gratuite pour tous vos projets d'espaces verts.</p>
+          <h1>{t('contact.title')}</h1>
+          <p>{t('contact.subtitle')}</p>
         </div>
       </section>
 
@@ -50,11 +37,11 @@ export default function Contact() {
         <div className="container contact-grid">
           {/* FORM */}
           <div className="contact-form-section">
-            <h2>Évaluation gratuite</h2>
+            <h2>{t('contact.form.title')}</h2>
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="name">Votre nom *</label>
+                  <label htmlFor="name">{t('contact.form.name')}</label>
                   <input
                     id="name"
                     name="name"
@@ -62,11 +49,11 @@ export default function Contact() {
                     required
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Jean Tremblay"
+                    placeholder={t('contact.form.name')}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">Numéro de téléphone *</label>
+                  <label htmlFor="phone">{t('contact.form.phone')}</label>
                   <input
                     id="phone"
                     name="phone"
@@ -74,13 +61,13 @@ export default function Contact() {
                     required
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="819-000-0000"
+                    placeholder={t('contact.form.phone')}
                   />
                 </div>
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Courriel *</label>
+                <label htmlFor="email">{t('contact.form.email')}</label>
                 <input
                   id="email"
                   name="email"
@@ -88,14 +75,14 @@ export default function Contact() {
                   required
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="jean@example.com"
+                  placeholder={t('contact.form.email')}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="service">Services requis</label>
+                <label htmlFor="service">{t('contact.form.service')}</label>
                 <select id="service" name="service" value={form.service} onChange={handleChange}>
-                  <option value="">Sélectionnez un service</option>
+                  <option value="">{t('contact.form.selectService')}</option>
                   {serviceOptions.map((s) => (
                     <option key={s} value={s}>{s}</option>
                   ))}
