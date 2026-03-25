@@ -30,7 +30,7 @@ export default function Stihl() {
             </div>
             <div className="stihl-info-block">
               <span className="stihl-info-title">{t('stihl.contactTitle')}</span>
-              <p className="stihl-contact">{t('stihl.contactDesc')}</p>
+              <p className="stihl-info-text">{t('stihl.contactDesc')}</p>
             </div>
           </div>
         </div>
