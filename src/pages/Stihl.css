@@ -1,208 +1,78 @@
-.stihl-page {
-  background: #fff;
-  color: #ff6600;
-  min-height: 80vh;
-  padding: 3rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: inherit;
-}
+.stihl-page { color: var(--accent, #ff6600); }
 
-/* Background image for the STIHL page */
-.stihl-page {
+/* HERO - match site pattern with container + overlay */
+.stihl-hero {
+  position: relative;
   background-image: url('/tondeuse.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  position: relative;
+  padding: 5.5rem 0 3.25rem;
 }
 
-.stihl-page::before {
-  content: "";
+.stihl-hero .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.55); /* lighter white wash so background appears more */
-  pointer-events: none;
-  backdrop-filter: blur(3px);
+  background: rgba(0,0,0,0.45);
 }
 
-.stihl-container { position: relative; z-index: 2; }
-
-.stihl-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem;
-  padding-top: 3.25rem; /* extra top gap to avoid touching navbar */
-}
-
-.stihl-top {
+.stihl-hero-content {
+  position: relative;
+  z-index: 2; /* keep content above the overlay */
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 0;
 }
 
-.stihl-logo {
-  width: 84px;
-  height: auto;
-  opacity: 0.95;
-}
+.stihl-hero-left { flex: 1 1 60%; color: #fff; text-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+.stihl-hero-right { flex: 0 0 180px; display:flex; align-items:center; justify-content:center; z-index:3; }
 
-.stihl-logo-below {
-  margin-top: 8px;
-  width: 110px; /* slightly larger logo when placed below title */
-}
+/* Make the overlay non-blocking so buttons/links are clickable */
+.stihl-hero .hero-overlay { z-index:1; pointer-events: none; }
 
-.stihl-title {
-  color: #ff6600; /* make main title orange */
-  font-size: 2.6rem;
-  margin: 0;
-  letter-spacing: 0.2px;
-  font-family: var(--font-main);
-  font-weight: 800;
-  text-transform: none;
-  line-height: 1.05;
-}
+.stihl-logo { width: 140px; height: auto; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.5)); }
 
-@media (max-width: 640px) {
-  .stihl-logo-below { width: 92px; }
-  .stihl-title { font-size: 1.8rem; }
-}
+.stihl-title { color: #fff; font-size: 2.4rem; margin: 0 0 0.5rem 0; font-weight: 800; }
+.stihl-desc { color: rgba(255,255,255,0.92); font-size: 1.1rem; margin: 0 0 1rem 0; max-width: 720px; }
 
-.stihl-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
+.hero-cta .btn-primary { font-weight: 700; }
 
-.stihl-hero-info {
-  padding: 1rem 0.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.stihl-desc {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #ff6600; /* make subtitle/lead text orange */
-  font-family: var(--font-main);
-  font-weight: 700; /* make highlight bold */
-  max-width: 760px;
-}
+.stihl-content { padding: 2.25rem 0 4rem; }
 
-.stihl-cta-row {
-  margin-top: 1rem;
-}
+.stihl-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.stihl-info-block { background: var(--card-bg, #fff); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 28px rgba(11,22,27,0.06); }
+.stihl-info-title { color: var(--accent, #ff6600); font-weight: 700; margin-bottom: 0.5rem; }
+.stihl-info-text { color: var(--text-dark, #233032); margin: 0; }
 
-.stihl-info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  width: 100%;
-  max-width: 820px;
-  margin: 1rem auto 0;
-  justify-items: center;
-}
-
-.stihl-cta-below {
-  display: flex;
-  justify-content: center;
-  margin: 1.25rem 0 2rem;
-}
-
-.stihl-info-block {
-  background: linear-gradient(180deg, #fff 0%, #fff3e6 100%);
-  border-radius: 10px;
-  padding: 1.2rem 1.5rem;
-  box-shadow: 0 6px 18px rgba(31,42,45,0.04);
-  text-align: center; /* center the text like the other card */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.stihl-info-title {
-  color: #ff6600;
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 0.45rem;
-  font-family: var(--font-main);
-}
-
-.stihl-info-text {
-  color: #2b3b3d;
-  font-size: 1rem;
-  margin: 0;
-  font-family: var(--font-main);
-}
-
-.stihl-contact {
-  font-size: 1.05rem;
-  color: var(--text-dark);
-  text-align: center;
-  font-family: var(--font-main);
-  margin: 0;
-}
-
-.stihl-btn {
-  margin-top: 0;
-  background: #ff6600;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 0.85rem 1.6rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 10px 30px rgba(255,102,0,0.18);
-}
-
-.stihl-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(255,102,0,0.22); }
-
-/* Make the embedded video more prominent */
-.stihl-video-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
+.stihl-video-wrap { display:flex; justify-content:center; margin-top: 1rem; }
 .stihl-video iframe {
-  width: 70vw; /* 30% smaller than full width */
-  max-width: 1400px;
+  /* reduced further: cap lowered to ~900px and narrower viewport for a smaller appearance */
+  width: min(900px, 88vw);
+  max-width: none;
   aspect-ratio: 16/9;
-  height: auto;
-  max-height: 80vh;
-  border-radius: 8px;
-  box-shadow: 0 24px 72px rgba(31,42,45,0.28);
+  border-radius: 10px;
   border: 0;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
 }
-
-@media (max-width: 900px) {
-  .stihl-video iframe { width: 94vw; }
-}
-
-  .stihl-modal-video iframe {
-    width: 100%;
-    height: 60vh;
-    border-radius: 8px;
-  }
 
 @media (max-width: 880px) {
-  .stihl-hero { grid-template-columns: 1fr; }
+  .stihl-hero-content { flex-direction: column; align-items: flex-start; }
+  .stihl-hero-right { align-self: center; }
   .stihl-info-grid { grid-template-columns: 1fr; }
-  .stihl-modal-video iframe { height: 46vh; }
+}
+
+/* Orange modifier for STIHL CTA */
+.btn-orange {
+  background: #ff6600 !important;
+  border-color: #ff6600 !important;
+  color: #fff !important;
+}
+.btn-orange:hover {
+  background: #e65500 !important;
+  border-color: #e65500 !important;
+  box-shadow: 0 8px 28px rgba(230,85,0,0.18);
+  transform: translateY(-2px);
 }
 
