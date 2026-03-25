@@ -17,15 +17,6 @@ export default function Stihl() {
         </div>
 
         <div className="stihl-hero">
-          <div className="stihl-video">
-            <iframe
-              src="https://www.youtube.com/embed/oL7mnX0tYZY?rel=0"
-              title="Tondeuse robotisée - vidéo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
           <div className="stihl-hero-info">
             <p className="stihl-desc">{t('stihl.highlight')}</p>
             <div className="stihl-cta-row">
@@ -35,7 +26,6 @@ export default function Stihl() {
         </div>
 
         <div className="stihl-content">
-          <div className="stihl-highlight">{t('stihl.highlight')}</div>
           <div className="stihl-info-grid">
             <div className="stihl-info-block">
               <span className="stihl-info-title">{t('stihl.installationTitle')}</span>
@@ -47,8 +37,17 @@ export default function Stihl() {
             </div>
           </div>
         </div>
-
-        
+        <div className="stihl-video-wrap">
+          <div className="stihl-video">
+            <iframe
+              src="https://www.youtube.com/embed/oL7mnX0tYZY?rel=0"
+              title="Tondeuse robotisée - vidéo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -60,10 +60,10 @@
 }
 
 .stihl-hero {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
   margin-bottom: 2rem;
 }
 
@@ -94,7 +94,8 @@
   gap: 1rem;
   width: 100%;
   max-width: 820px;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
+  justify-items: center;
 }
 
 .stihl-info-block {
@@ -118,14 +119,16 @@
 }
 
 .stihl-contact {
-  font-size: 1.1rem;
-  color: #ff6600;
+  font-size: 1.05rem;
+  color: var(--text-dark);
   text-align: center;
-  background: #fff3e6;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.08);
-  font-family: inherit;
+  background: linear-gradient(180deg, #fff 0%, #fff3e6 100%);
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(31,42,45,0.04);
+  font-family: var(--font-main);
+  width: 100%;
+  max-width: 420px;
 }
 
 .stihl-btn {
@@ -145,12 +148,26 @@
 .stihl-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(255,102,0,0.22); }
 
 /* Make the embedded video more prominent */
-.stihl-video iframe {
+.stihl-video-wrap {
   width: 100%;
-  height: 56vh;
-  border-radius: 12px;
-  box-shadow: 0 18px 50px rgba(31,42,45,0.18);
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.stihl-video iframe {
+  width: 70vw; /* 30% smaller than full width */
+  max-width: 1400px;
+  aspect-ratio: 16/9;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 24px 72px rgba(31,42,45,0.28);
   border: 0;
+}
+
+@media (max-width: 900px) {
+  .stihl-video iframe { width: 94vw; }
 }
 
   .stihl-modal-video iframe {
