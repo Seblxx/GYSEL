@@ -1,28 +1,10 @@
 import { Link } from "react-router-dom";
-import {
-  Snowflake,
-  ArrowRight,
-  CheckCircle,
-  Truck,
-  Clock,
-  Shield,
-} from "lucide-react";
+import { Snowflake, ArrowRight, CheckCircle } from "lucide-react";
 import "./Neige.css";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Neige() {
   const { lang, t } = useLanguage();
-
-  const features = (t("neige.features") || []).map((f, i) => ({
-    icon: [
-      <Truck size={32} />,
-      <Shield size={32} />,
-      <Clock size={32} />,
-      <Truck size={32} />,
-    ][i] || <Truck size={32} />,
-    title: f.title,
-    desc: f.desc,
-  }));
 
   const advantages = t("neige.advantages") || [];
 
