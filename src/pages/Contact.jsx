@@ -91,31 +91,31 @@ export default function Contact() {
 
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="address">Adresse</label>
+                  <label htmlFor="address">{t('contact.form.address')}</label>
                   <input
                     id="address"
                     name="address"
                     type="text"
                     value={form.address}
                     onChange={handleChange}
-                    placeholder="123 rue Exemple"
+                    placeholder={t('contact.form.address')}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="city">Ville</label>
+                  <label htmlFor="city">{t('contact.form.city')}</label>
                   <input
                     id="city"
                     name="city"
                     type="text"
                     value={form.city}
                     onChange={handleChange}
-                    placeholder="Sherbrooke"
+                    placeholder={t('contact.form.city')}
                   />
                 </div>
               </div>
 
               <div className="form-group">
-                <label htmlFor="details">Détails</label>
+                <label htmlFor="details">{t('contact.form.details')}</label>
                 <textarea
                   id="details"
                   name="details"
@@ -123,14 +123,14 @@ export default function Contact() {
                   onChange={handleChange}
                   maxLength={500}
                   rows={4}
-                  placeholder="Décrivez votre projet ou vos besoins..."
+                  placeholder={t('contact.form.details') + '...'}
                 />
                 <span className="char-count">{form.details.length} / 500</span>
               </div>
 
               <button type="submit" className="btn-primary submit-btn">
                 <Send size={18} />
-                Envoyer la demande
+                {t('contact.form.submit')}
               </button>
             </form>
           </div>
@@ -138,34 +138,38 @@ export default function Contact() {
           {/* INFO */}
           <div className="contact-info-section">
             <div className="contact-info-card">
-              <h3>Nos coordonnées</h3>
+              <h3>{t('contact.info.title')}</h3>
               <ul className="contact-info-list">
                 <li>
                   <div className="contact-info-icon"><MapPin size={20} /></div>
                   <div>
-                    <strong>Adresse</strong>
-                    <p>7702 chemin de St-Élie<br />Sherbrooke, QC J1R 0C4</p>
+                    <strong>{t('contact.info.addressLabel')}</strong>
+                    <p>{t('contact.info.address').split('\n').map((l, i, arr) => (
+                      <span key={i}>{l}{i < arr.length - 1 && <br />}</span>
+                    ))}</p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-info-icon"><Phone size={20} /></div>
                   <div>
-                    <strong>Téléphone</strong>
-                    <p><a href="tel:819-348-9513">819-348-9513</a></p>
+                    <strong>{t('contact.info.phoneLabel')}</strong>
+                    <p><a href={`tel:${t('contact.info.phone')}`}>{t('contact.info.phone')}</a></p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-info-icon"><Mail size={20} /></div>
                   <div>
-                    <strong>Courriel</strong>
-                    <p><a href="mailto:info@groupegysel.com">info@groupegysel.com</a></p>
+                    <strong>{t('contact.info.emailLabel')}</strong>
+                    <p><a href={`mailto:${t('contact.info.email')}`}>{t('contact.info.email')}</a></p>
                   </div>
                 </li>
                 <li>
                   <div className="contact-info-icon"><Clock size={20} /></div>
                   <div>
-                    <strong>Heures d'ouverture</strong>
-                    <p>Lundi - Vendredi : 8h - 17h<br />Samedi : Sur rendez-vous</p>
+                    <strong>{t('contact.info.hoursLabel')}</strong>
+                    <p>{t('contact.info.hours').split('\n').map((l, i, arr) => (
+                      <span key={i}>{l}{i < arr.length - 1 && <br />}</span>
+                    ))}</p>
                   </div>
                 </li>
               </ul>
