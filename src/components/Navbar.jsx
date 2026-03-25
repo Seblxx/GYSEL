@@ -37,12 +37,6 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${showScrolled ? 'scrolled' : ''} ${isHiver ? 'navbar-hiver' : ''} ${isStihl ? 'navbar-stihl' : ''}`}>
       <div className="navbar-inner container">
-        {/* Centered logo text - only visible before scroll */}
-        <div className="navbar-center-logo">
-          <span className="logo-prefix">LE GROUPE</span>
-          <span className="logo-name">GYSEL</span>
-        </div>
-
         {/* Left logo image - only visible after scroll */}
         <Link to="/" className="navbar-logo">
           <img src="/logo-GG-blanc.png" alt="Le Groupe Gysel" />

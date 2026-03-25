@@ -116,19 +116,14 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 /* ===== ENTRANCE ANIMATIONS ===== */
 .app-content {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.app-content.revealed {
   opacity: 1;
 }
 
-.app-content.revealed main > * {
+.app-content main > * {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.app-content.revealed section {
+.app-content section {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 

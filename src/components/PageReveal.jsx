@@ -29,7 +29,6 @@ export default function PageReveal({ onComplete }) {
         <div className="reveal-door reveal-door-right" />
       </div>
       <div className="reveal-logo">
-        <img src="/logo-GG-blanc.png" alt="Le Groupe Gysel" />
         <div className="reveal-text">
           <span className="reveal-pre">LE GROUPE</span>
           <span className="reveal-name">GYSEL</span>

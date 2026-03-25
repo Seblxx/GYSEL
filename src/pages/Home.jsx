@@ -44,6 +44,10 @@ export default function Home() {
         </video>
         <div className="hero-overlay" />
         <div className="hero-content container">
+          <div className="hero-logo">
+            <span className="hero-logo-prefix">LE GROUPE</span>
+            <span className="hero-logo-name">GYSEL</span>
+          </div>
           <p className="hero-quote">{t('home.hero.quote')}</p>
           <div className="hero-btns">
             <Link to="/services" className="btn-secondary">

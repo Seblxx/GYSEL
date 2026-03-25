@@ -60,21 +60,7 @@
   animation: fadeOut 0.5s ease-out 2.5s forwards;
 }
 
-.reveal-logo img {
-  height: 120px;
-  width: auto;
-  margin-bottom: 20px;
-  animation: logoFloat 2s ease-in-out infinite;
-}
 
-@keyframes logoFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
 .reveal-text {
   display: flex;
@@ -129,9 +115,6 @@
 }
 
 @media (max-width: 768px) {
-  .reveal-logo img {
-    height: 80px;
-  }
   .reveal-name {
     font-size: 2.5rem;
   }

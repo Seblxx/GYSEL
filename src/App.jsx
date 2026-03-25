@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import PageReveal from "./components/PageReveal";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Neige from "./pages/Neige";
@@ -10,17 +8,16 @@ import Contact from "./pages/Contact";
 import Stihl from "./pages/Stihl";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import ScrollToTop from './components/ScrollToTop'
+import PageReveal from './components/PageReveal'
 
 function App() {
-  const [revealed, setRevealed] = useState(false);
-
   return (
     <LanguageProvider>
       <>
+        <PageReveal />
         <ScrollToTop />
-        <PageReveal onComplete={() => setRevealed(true)} />
-        {revealed && <Navbar />}
-        <div className={`app-content ${revealed ? "revealed" : ""}`}>
+        <Navbar />
+        <div className="app-content">
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
