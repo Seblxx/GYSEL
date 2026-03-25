@@ -1,73 +1,91 @@
 import { Link, useLocation } from "react-router-dom";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import "./Footer.css";
-import { useLanguage } from '../contexts/LanguageContext'
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Footer() {
   const { pathname } = useLocation();
   const isHiver = pathname === "/ineige";
   const isStihl = pathname === "/stihl";
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
-    <footer className={`footer ${isHiver ? "footer-hiver" : ""} ${isStihl ? "footer-stihl" : ""}`}>
+    <footer
+      className={`footer ${isHiver ? "footer-hiver" : ""} ${isStihl ? "footer-stihl" : ""}`}
+    >
       <div className="footer-top">
+        <div className="colab-brand">
+          <div className="col-img">
+            <img src="/COSTCO LOGO.png" alt="Logo Costco" />
+          </div>
+          <div className="col-img">
+            <img src="/IMMEX.png" alt="Logo Costco" />
+          </div>
+          <div className="col-img">
+            <img src="/ROYER.png" alt="Logo Costco" />
+          </div>
+          <div className="col-img">
+            <img src="/images/logo-thibeault-gysel.png" alt="Logo Costco" />
+          </div>
+        </div>
         <div className="container footer-grid">
-            <div className="footer-brand">
+          <div className="footer-brand">
             <img
               src="/logo-GG-blanc.png"
               alt="Le Groupe Gysel"
               className="footer-logo"
             />
-            <p className="footer-tagline">{t('footer.tagline')}</p>
+            <p className="footer-tagline">{t("footer.tagline")}</p>
           </div>
 
           <div className="footer-col">
-            <h4>{t('footer.navigationTitle')}</h4>
+            <h4>{t("footer.navigationTitle")}</h4>
             <ul>
               <li>
-                <Link to="/">{t('nav.home')}</Link>
+                <Link to="/">{t("nav.home")}</Link>
               </li>
               <li>
-                <Link to="/services">{t('nav.services')}</Link>
+                <Link to="/services">{t("nav.services")}</Link>
               </li>
               <li>
-                <Link to="/ineige">{t('nav.ineige')}</Link>
+                <Link to="/ineige">{t("nav.ineige")}</Link>
               </li>
               <li>
-                <Link to="/stihl">{t('nav.stihl')}</Link>
+                <Link to="/stihl">{t("nav.stihl")}</Link>
               </li>
               <li>
-                <Link to="/contact">{t('nav.contact')}</Link>
+                <Link to="/contact">{t("nav.contact")}</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>{t('footer.servicesTitle')}</h4>
+            <h4>{t("footer.servicesTitle")}</h4>
             <ul>
-              {t('services.list').slice(0,4).map((s, i) => (
-                <li key={i}>
-                  <Link to="/services">{s.title}</Link>
-                </li>
-              ))}
+              {t("services.list")
+                .slice(0, 4)
+                .map((s, i) => (
+                  <li key={i}>
+                    <Link to="/services">{s.title}</Link>
+                  </li>
+                ))}
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>{t('footer.contactTitle')}</h4>
+            <h4>{t("footer.contactTitle")}</h4>
             <ul className="footer-contact">
               <li>
                 <MapPin size={16} />
-                <span>{t('footer.address')}</span>
+                <span>{t("footer.address")}</span>
               </li>
               <li>
                 <Phone size={16} />
-                <a href={`tel:${t('phone')}`}>{t('phone')}</a>
+                <a href={`tel:${t("phone")}`}>{t("phone")}</a>
               </li>
               <li>
                 <Mail size={16} />
-                <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
+                <a href={`mailto:${t("footer.email")}`}>{t("footer.email")}</a>
               </li>
             </ul>
             <div className="footer-socials">
@@ -95,7 +113,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p>
-            &copy; {new Date().getFullYear()} {t('footer.copyright')}
+            &copy; {new Date().getFullYear()} {t("footer.copyright")}
           </p>
         </div>
       </div>

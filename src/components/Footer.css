@@ -5,12 +5,16 @@
 
 .footer-hiver {
   background-color: #1a4f5a;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .footer-stihl {
   background-color: #ff5f15;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .footer-hiver .footer-socials a:hover {
@@ -21,8 +25,25 @@
   background: #e65000;
 }
 
-.footer-top {
-  padding: 60px 0 40px;
+.colab-brand {
+  background-color: #f0f7ec;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 50px 0;
+}
+
+.col-img {
+  display: flex;
+  justify-content: center;
+}
+
+.col-img img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
 .footer-grid {
@@ -92,7 +113,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +126,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 20px 0;
   text-align: center;
   font-size: 0.85rem;
@@ -116,6 +137,10 @@
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+  }
+
+  .colab-brand {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
