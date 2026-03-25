@@ -79,6 +79,18 @@
       "Location de pelle mécanique sans opérateur",
       "Déneigement"
     ]
+    ,
+    "info": {
+      "title": "Nos coordonnées",
+      "addressLabel": "Adresse",
+      "address": "7702 chemin de St-Élie\\nSherbrooke, QC J1R 0C4",
+      "phoneLabel": "Téléphone",
+      "phone": "819-348-9513",
+      "emailLabel": "Courriel",
+      "email": "info@groupegysel.com",
+      "hoursLabel": "Heures d'ouverture",
+      "hours": "Lundi - Vendredi : 8h - 17h\\nSamedi : Sur rendez-vous"
+    }
   },
   "neige": {
     "hero": {

@@ -79,6 +79,18 @@
       "Excavator rental without operator",
       "Snow removal"
     ]
+    ,
+    "info": {
+      "title": "Contact information",
+      "addressLabel": "Address",
+      "address": "7702 chemin de St-Élie\\nSherbrooke, QC J1R 0C4",
+      "phoneLabel": "Phone",
+      "phone": "819-348-9513",
+      "emailLabel": "Email",
+      "email": "info@groupegysel.com",
+      "hoursLabel": "Opening hours",
+      "hours": "Monday - Friday: 8am - 5pm\\nSaturday: By appointment"
+    }
   },
   "neige": {
     "hero": {
