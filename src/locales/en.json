@@ -34,13 +34,13 @@
     "stats": [
       { "number": "10+", "label": "Years of experience" },
       { "number": "1000+", "label": "Satisfied customers" }
-    ]
-  },
-  "intro": {
-    "title": "Landscaping specialists.",
-    "p1": "Since its founding, Groupe Gysel has been recognized for quality service, outstanding efficiency, and unmatched professionalism. Whatever service you seek and your expectations, with us you will be guaranteed complete satisfaction.",
-    "p2": "Our team is ready to respond to all requests and manages each project with the professionalism expected by our clients.",
-    "cta": "Discover our services"
+    ],
+    "intro": {
+      "title": "Landscaping specialists.",
+      "p1": "Since its founding, Groupe Gysel has been recognized for quality service, outstanding efficiency, and unmatched professionalism. Whatever service you seek and your expectations, with us you will be guaranteed complete satisfaction.",
+      "p2": "Our team is ready to respond to all requests and manages each project with the professionalism expected by our clients.",
+      "cta": "Discover our services"
+    }
   },
   "contact": {
     "title": "Contact us",

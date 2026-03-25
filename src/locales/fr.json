@@ -34,13 +34,13 @@
     "stats": [
       { "number": "10+", "label": "Années d'expérience" },
       { "number": "1000+", "label": "Clients satisfaits" }
-    ]
-  },
-  "intro": {
-    "title": "Spécialiste en espaces verts.",
-    "p1": "Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.",
-    "p2": "Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.",
-    "cta": "Découvrir nos services"
+    ],
+    "intro": {
+      "title": "Spécialiste en espaces verts.",
+      "p1": "Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.",
+      "p2": "Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.",
+      "cta": "Découvrir nos services"
+    }
   },
   "contact": {
     "title": "Nous joindre",
