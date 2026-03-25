@@ -25,6 +25,10 @@
   background: #e65000;
 }
 
+.footer-top {
+  padding: 0 0 40px 0;
+}
+
 .colab-brand {
   background-color: #fff;
   display: grid;
