@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "ineige": "iNeige",
+    "stihl": "STIHL",
+    "contact": "Contact"
+  },
+  "phone": "819-348-9513",
+  "footer": {
+    "tagline": "Domptez votre terrain, devenez la fierté de l'Estrie.",
+    "navigationTitle": "Navigation",
+    "servicesTitle": "Services populaires",
+    "contactTitle": "Nous joindre",
+    "address": "7702 chemin de St-Élie, Sherbrooke, QC J1R 0C4",
+    "email": "info@groupegysel.com"
+    ,
+    "copyright": "Le Groupe Gysel. Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "quote": "Cessez de regarder chez le voisin pour trouver un gazon parfait !",
+      "cta1": "Découvrir nos services",
+      "cta2": "Évaluation gratuite"
+    },
+    "highlightsTitle": "Nos experts pour votre résidence ou commerce",
+    "highlightsSubtitle": "Des services complets pour transformer et maintenir vos espaces verts.",
+    "highlights": [
+      { "title": "Traitement de pelouse", "desc": "Un gazon vert et en santé grâce à nos traitements spécialisés." },
+      { "title": "Hydro-ensemencement", "desc": "3x moins cher que la tourbe. La clé du gazon parfait." },
+      { "title": "Tonte & Entretien", "desc": "Tonte hebdomadaire et entretien paysager professionnel." },
+      { "title": "Déneigement iNeige", "desc": "Pelleter est une chose du passé. Découvrez iNeige." }
+    ],
+    "stats": [
+      { "number": "10+", "label": "Années d'expérience" },
+      { "number": "1000+", "label": "Clients satisfaits" }
+    ],
+    "intro": {
+      "title": "Spécialiste en espaces verts.",
+      "p1": "Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.",
+      "p2": "Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.",
+      "cta": "Découvrir nos services"
+    }
+  },
+
+  "seeAll": {
+    "services": "Voir tous les services"
+  },
+  "contact": {
+    "title": "Nous joindre",
+    "subtitle": "Obtenez une évaluation gratuite pour tous vos projets d'espaces verts.",
+    "form": {
+      "title": "Évaluation gratuite",
+      "name": "Votre nom *",
+      "phone": "Numéro de téléphone *",
+      "email": "Courriel *",
+      "service": "Services requis",
+      "selectService": "Sélectionnez un service",
+      "address": "Adresse",
+      "city": "Ville",
+      "details": "Détails",
+      "submit": "Envoyer",
+      "success": "Merci ! Votre demande a été envoyée. Nous vous contacterons sous peu."
+    },
+    "servicesOptions": [
+      "Tonte de pelouse",
+      "Nettoyage printemps",
+      "Nettoyage automne",
+      "Traitement de pelouse",
+      "Réparation de pelouse",
+      "Pose de tourbe",
+      "Hydro-ensemencement",
+      "Entretien paysager",
+      "Taillage de haies",
+      "Terrassement et préparation",
+      "Mini-excavation",
+      "Pose de muret et pavé",
+      "Location de pelle mécanique avec opérateur",
+      "Location de pelle mécanique sans opérateur",
+      "Déneigement"
+    ]
+  },
+  "neige": {
+    "hero": {
+      "title": "Pelleter est une chose du passé.",
+      "desc": "Le Groupe Gysel et son nouveau service iNeige sont l'essence même du mot QUIÉTUDE. Nous nous occupons de votre entrée de cour, votre stationnement, votre espace commercial et de votre parc de stationnements.",
+      "assurance": "Soyez assurés d'un déneigement rapide, efficace et minutuieux",
+      "cta": "Obtenir une soumission"
+    },
+    "featuresTitle": "Services de déneigement",
+    "featuresSubtitle": "Des solutions adaptées pour passer l'hiver sans souci.",
+    "features": [
+      { "title": "Déneigement résidentiel", "desc": "Faites confiance au leader en Estrie. SERVICE EXEMPLAIRE Nous avons les meilleures techniques, la meilleure équipe et les meilleurs équipements." },
+      { "title": "Déneigement multi-logements", "desc": "Déchargez-vous d'une tâche en nous confiant votre déneigement. Stationnement parfait pour votre immeuble." },
+      { "title": "Votre solution déneigement", "desc": "La neige, c'est dame nature. Le déneigement, c'est nous." },
+      { "title": "Épandage d'abrasif", "desc": "La clé pour affronter l'hiver. Sécurité hivernale garantie grâce à notre service d'épandage d'abrasif." }
+    ],
+    "advantages": [
+      "Service rapide et fiable",
+      "Équipement professionnel",
+      "Forfaits saisonniers avantageux",
+      "Couverture complète en Estrie",
+      "Équipe expérimentée",
+      "Déglaçage inclus"
+    ]
+    ,
+    "why": {
+      "title": "Pourquoi choisir iNeige ?",
+      "p": "Avec iNeige, bénéficiez de l'expertise du Groupe Gysel pour un hiver sans tracas. Notre équipe professionnelle s'occupe de tout pour que vous puissiez profiter de la saison."
+    },
+    "cta": {
+      "title": "Prêt pour l'hiver ?",
+      "desc": "Réservez votre forfait de déneigement dès maintenant et profitez d'un tarif préférentiel.",
+      "btn": "Demander un devis"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "desc": "Des solutions complètes pour l'entretien et l'aménagement de vos espaces verts. Résidentiel et commercial en Estrie.",
+    "list": [
+      { "title": "Traitement de pelouse", "desc": "Un problème avec votre pelouse ? Nous sommes les spécialistes. Pour une apparence soignée et en santé." },
+      { "title": "Terreautage haute performance", "desc": "Transformez votre sol ! Ne remplacez plus votre gazon, régénérez-le en profondeur grâce à notre terreautage biologique." },
+      { "title": "Hydro-ensemencement", "desc": "La clé du gazon parfait. 3x moins cher ! Nous avons les meilleures techniques pour réparer et ensemencer toutes les superficies." },
+      { "title": "Entretien et aménagement paysager", "desc": "Conception, installation et entretien d'espaces extérieurs : jardins, pelouses, arbres, plantes et taillage de haies." },
+      { "title": "Tondeuse Robot", "desc": "Installation de qualité pour votre tondeuse robot par notre équipe d'experts." },
+      { "title": "Nettoyage de printemps", "desc": "Débutez la saison estivale du bon pied avec notre équipe motivée !" },
+      { "title": "Nettoyage d'automne", "desc": "Déchargez-vous d'une tâche en nous confiant votre hivernisation." },
+      { "title": "Tonte de pelouse", "desc": "Tonte hebdomadaire, nettoyage des débris, odeur de gazon frais garanti !" },
+      { "title": "Nettoyage de stationnement", "desc": "Effacez l'hiver, redonnez du prestige à votre espace. Redonnez vie à votre stationnement après un hiver intense." },
+      { "title": "Réparation de pelouse", "desc": "Domptez votre terrain ! Nos équipements spécialisés sont conçus pour réparer votre pelouse." },
+      { "title": "Terrassement et excavation", "desc": "Pose de muret et pavé, location de pelle mécanique avec ou sans opérateur." }
+    ]
+    ,
+    "cta": {
+      "title": "Prêt à transformer votre terrain ?",
+      "desc": "Contactez-nous pour une évaluation gratuite de vos besoins.",
+      "btn": "Demander une évaluation"
+    }
+    ,
+    "feature": {
+      "badge": "Nouveau",
+      "title": "Terreautage Haute Performance",
+      "p": "Découvrez le Terreautage Haute Performance. Une solution biologique pour densifier votre pelouse et enrichir votre terrain en profondeur.",
+      "list": [
+        "Solution 100% biologique",
+        "Densifie la pelouse existante",
+        "Enrichit le sol en profondeur",
+        "Résultats visibles rapidement"
+      ]
+    }
+  },
+  "stihl": {
+    "title": "TONDEUSE ROBOTISÉE",
+    "highlight": "Tondre sera une histoire du passé !",
+    "installationTitle": "Installation professionnelle",
+    "installationDesc": "Besoin d'une installation de qualité pour votre tondeuse robot ? Faites confiance à notre équipe d'experts pour s'occuper de tout !",
+    "contactTitle": "Contactez-nous",
+    "contactDesc": "Contactez-nous dès aujourd'hui pour en savoir plus sur nos offres et profitez d'un jardin impeccable grâce à notre service de Tondeuse Robot !",
+    "btn": "En savoir plus"
+  }
+}

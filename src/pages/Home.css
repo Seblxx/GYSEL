@@ -165,6 +165,14 @@
   margin-bottom: 50px;
 }
 
+.highlights-header .section-subtitle {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

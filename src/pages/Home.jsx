@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Leaf, Droplets, Scissors, Snowflake } from 'lucide-react'
 import './Home.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
-const highlights = [
+const defaultHighlights = [
   {
     icon: <Leaf size={32} />,
     title: 'Traitement de pelouse',
@@ -26,6 +27,16 @@ const highlights = [
 ]
 
 export default function Home() {
+  const { t } = useLanguage()
+
+  const icons = [<Leaf size={32} />, <Droplets size={32} />, <Scissors size={32} />, <Snowflake size={32} />]
+  const localeHighlights = t('home.highlights') || []
+  const highlights = (localeHighlights.length > 0)
+    ? localeHighlights.map((h, i) => ({ icon: icons[i] || <Leaf size={32} />, title: h.title, desc: h.desc }))
+    : defaultHighlights
+
+  const stats = t('home.stats') || []
+
   return (
     <div className="home">
       {/* HERO */}
@@ -35,15 +46,13 @@ export default function Home() {
         </video>
         <div className="hero-overlay" />
         <div className="hero-content container">
-          <p className="hero-quote">
-            "Cessez de regarder chez le voisin pour trouver un gazon parfait !"
-          </p>
+          <p className="hero-quote">{t('home.hero.quote')}</p>
           <div className="hero-btns">
             <Link to="/services" className="btn-primary">
-              Découvrir nos services <ArrowRight size={18} />
+              {t('home.hero.cta1')} <ArrowRight size={18} />
             </Link>
             <Link to="/contact" className="btn-secondary">
-              Évaluation gratuite
+              {t('home.hero.cta2')}
             </Link>
           </div>
         </div>
@@ -56,20 +65,11 @@ export default function Home() {
           <div className="intro-badge">
             <img src="/estrie.png" alt="LE #1 EN ESTRIE" />
           </div>
-          <h2 className="intro-title">Spécialiste en espaces verts.</h2>
-          <p className="intro-text">
-            Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité,
-            son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit
-            le service que vous recherchez et vos attentes, avec nous vous aurez la garantie
-            d'une entière satisfaction.
-          </p>
-          <p className="intro-text">
-            Notre équipe est prête à répondre à toutes les demandes,
-            et gère chaque projet avec le professionnalisme attendu
-            par nos clients.
-          </p>
+          <h2 className="intro-title">{t('home.intro.title') || 'Spécialiste en espaces verts.'}</h2>
+          <p className="intro-text">{t('home.intro.p1') || `Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.`}</p>
+          <p className="intro-text">{t('home.intro.p2') || `Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.`}</p>
           <Link to="/services" className="btn-intro">
-            Découvrir nos services
+            {t('home.intro.cta') || 'Découvrir nos services'}
           </Link>
         </div>
       </section>
@@ -78,12 +78,8 @@ export default function Home() {
       <section className="highlights">
         <div className="container">
           <div className="highlights-header">
-            <h2 className="section-title" style={{ color: '#fff' }}>
-              Nos experts pour votre résidence ou commerce
-            </h2>
-            <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Des services complets pour transformer et maintenir vos espaces verts.
-            </p>
+            <h2 className="section-title" style={{ color: '#fff' }}>{t('home.highlightsTitle') || 'Nos experts pour votre résidence ou commerce'}</h2>
+            <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.85)' }}>{t('home.highlightsSubtitle') || 'Des services complets pour transformer et maintenir vos espaces verts.'}</p>
           </div>
           <div className="highlights-grid">
             {highlights.map((h, i) => (
@@ -96,7 +92,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
             <Link to="/services" className="btn-secondary">
-              Voir tous les services <ArrowRight size={18} />
+              {t('seeAll.services') || 'Voir tous les services'} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -105,12 +101,10 @@ export default function Home() {
       {/* CTA */}
       <section className="cta">
         <div className="container cta-inner">
-          <h2>Domptez votre terrain, devenez la fierté de l'Estrie.</h2>
-          <p>
-            Nos équipements spécialisés sont conçus pour réparer, ensemencer et terreauter votre pelouse.
-          </p>
+          <h2>{t('footer.tagline')}</h2>
+          <p>{t('services.desc')}</p>
           <Link to="/contact" className="btn-primary">
-            Évaluation gratuite <ArrowRight size={18} />
+            {t('home.hero.cta2')} <ArrowRight size={18} />
           </Link>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
 import './Navbar.css'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -16,12 +17,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const { lang, setLang, t } = useLanguage()
+
   const links = [
-    { to: '/', label: 'Accueil' },
-    { to: '/services', label: 'Services' },
-    { to: '/ineige', label: 'iNeige' },
-    { to: '/stihl', label: 'STIHL' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/', label: t('nav.home') },
+    { to: '/services', label: t('nav.services') },
+    { to: '/ineige', label: t('nav.ineige') },
+    { to: '/stihl', label: t('nav.stihl') },
+    { to: '/contact', label: t('nav.contact') },
   ]
 
   const isHiver = pathname === '/ineige'
@@ -57,10 +60,21 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="nav-lang">
+            <button
+              className="lang-toggle"
+              onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+              aria-label="Change language"
+            >
+              <span className={`lang-label ${lang === 'fr' ? 'active' : ''}`}>FR</span>
+              <span className="lang-sep">/</span>
+              <span className={`lang-label ${lang === 'en' ? 'active' : ''}`}>EN</span>
+            </button>
+          </li>
           <li className="nav-cta">
-            <a href="tel:819-348-9513" className="btn-phone">
+            <a href={`tel:${t('phone')}`} className="btn-phone">
               <Phone size={16} />
-              819-348-9513
+              {t('phone')}
             </a>
           </li>
         </ul>
