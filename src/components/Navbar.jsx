@@ -60,20 +60,22 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="nav-cta">
-            <a href={`tel:${t('phone')}`} className="btn-phone">
-              <Phone size={16} />
-              {t('phone')}
-            </a>
-          </li>
           <li className="nav-lang">
             <button
               className="lang-toggle"
               onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
               aria-label="Change language"
             >
-              {lang === 'fr' ? 'FR' : 'EN'}
+              <span className={`lang-label ${lang === 'fr' ? 'active' : ''}`}>FR</span>
+              <span className="lang-sep">/</span>
+              <span className={`lang-label ${lang === 'en' ? 'active' : ''}`}>EN</span>
             </button>
+          </li>
+          <li className="nav-cta">
+            <a href={`tel:${t('phone')}`} className="btn-phone">
+              <Phone size={16} />
+              {t('phone')}
+            </a>
           </li>
         </ul>
 

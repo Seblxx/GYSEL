@@ -92,8 +92,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <p>
-            &copy; {new Date().getFullYear()} Le Groupe Gysel. Tous droits
-            réservés.
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
         </div>
       </div>

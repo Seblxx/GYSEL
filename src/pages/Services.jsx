@@ -47,17 +47,13 @@ export default function Services() {
       <section className="feature-section">
         <div className="container feature-inner">
           <div className="feature-text">
-            <span className="feature-badge">Nouveau</span>
-            <h2>Terreautage Haute Performance</h2>
-            <p>
-              Découvrez le Terreautage Haute Performance. Une solution biologique pour densifier
-              votre pelouse et enrichir votre terrain en profondeur.
-            </p>
+            <span className="feature-badge">{t('services.feature.badge')}</span>
+            <h2>{t('services.feature.title')}</h2>
+            <p>{t('services.feature.p')}</p>
             <ul className="feature-list">
-              <li>Solution 100% biologique</li>
-              <li>Densifie la pelouse existante</li>
-              <li>Enrichit le sol en profondeur</li>
-              <li>Résultats visibles rapidement</li>
+              {(t('services.feature.list') || []).map((li, idx) => (
+                <li key={idx}>{li}</li>
+              ))}
             </ul>
           </div>
           <div className="feature-visual">

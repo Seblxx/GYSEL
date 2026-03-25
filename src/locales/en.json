@@ -14,6 +14,8 @@
     "contactTitle": "Contact us",
     "address": "7702 chemin de St-Élie, Sherbrooke, QC J1R 0C4",
     "email": "info@groupegysel.com"
+    ,
+    "copyright": "Groupe Gysel. All rights reserved."
   },
   "home": {
     "hero": {
@@ -33,6 +35,12 @@
       { "number": "10+", "label": "Years of experience" },
       { "number": "1000+", "label": "Satisfied customers" }
     ]
+  },
+  "intro": {
+    "title": "Landscaping specialists.",
+    "p1": "Since its founding, Groupe Gysel has been recognized for quality service, outstanding efficiency, and unmatched professionalism. Whatever service you seek and your expectations, with us you will be guaranteed complete satisfaction.",
+    "p2": "Our team is ready to respond to all requests and manages each project with the professionalism expected by our clients.",
+    "cta": "Discover our services"
   },
   "contact": {
     "title": "Contact us",
@@ -113,6 +121,18 @@
       "title": "Ready to transform your terrain?",
       "desc": "Contact us for a free assessment of your needs.",
       "btn": "Request an estimate"
+    }
+    ,
+    "feature": {
+      "badge": "New",
+      "title": "High-Performance Topdressing",
+      "p": "Discover High-Performance Topdressing. A biological solution to densify your lawn and enrich your soil deeply.",
+      "list": [
+        "100% biological solution",
+        "Densifies existing turf",
+        "Enriches soil deeply",
+        "Visible results quickly"
+      ]
     }
   },
   "stihl": {

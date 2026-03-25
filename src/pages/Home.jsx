@@ -65,20 +65,11 @@ export default function Home() {
           <div className="intro-badge">
             <img src="/estrie.png" alt="LE #1 EN ESTRIE" />
           </div>
-          <h2 className="intro-title">Spécialiste en espaces verts.</h2>
-          <p className="intro-text">
-            Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité,
-            son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit
-            le service que vous recherchez et vos attentes, avec nous vous aurez la garantie
-            d'une entière satisfaction.
-          </p>
-          <p className="intro-text">
-            Notre équipe est prête à répondre à toutes les demandes,
-            et gère chaque projet avec le professionnalisme attendu
-            par nos clients.
-          </p>
+          <h2 className="intro-title">{t('home.intro.title') || 'Spécialiste en espaces verts.'}</h2>
+          <p className="intro-text">{t('home.intro.p1') || `Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.`}</p>
+          <p className="intro-text">{t('home.intro.p2') || `Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.`}</p>
           <Link to="/services" className="btn-intro">
-            Découvrir nos services
+            {t('home.intro.cta') || 'Découvrir nos services'}
           </Link>
         </div>
       </section>

@@ -14,6 +14,8 @@
     "contactTitle": "Nous joindre",
     "address": "7702 chemin de St-Élie, Sherbrooke, QC J1R 0C4",
     "email": "info@groupegysel.com"
+    ,
+    "copyright": "Le Groupe Gysel. Tous droits réservés."
   },
   "home": {
     "hero": {
@@ -33,6 +35,12 @@
       { "number": "10+", "label": "Années d'expérience" },
       { "number": "1000+", "label": "Clients satisfaits" }
     ]
+  },
+  "intro": {
+    "title": "Spécialiste en espaces verts.",
+    "p1": "Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité, son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit le service que vous recherchez et vos attentes, avec nous vous aurez la garantie d'une entière satisfaction.",
+    "p2": "Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients.",
+    "cta": "Découvrir nos services"
   },
   "contact": {
     "title": "Nous joindre",
@@ -113,6 +121,18 @@
       "title": "Prêt à transformer votre terrain ?",
       "desc": "Contactez-nous pour une évaluation gratuite de vos besoins.",
       "btn": "Demander une évaluation"
+    }
+    ,
+    "feature": {
+      "badge": "Nouveau",
+      "title": "Terreautage Haute Performance",
+      "p": "Découvrez le Terreautage Haute Performance. Une solution biologique pour densifier votre pelouse et enrichir votre terrain en profondeur.",
+      "list": [
+        "Solution 100% biologique",
+        "Densifie la pelouse existante",
+        "Enrichit le sol en profondeur",
+        "Résultats visibles rapidement"
+      ]
     }
   },
   "stihl": {
