@@ -7,7 +7,11 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 5.5rem 0 3.25rem;
+  /* make hero taller so it extends further down the page */
+  padding: 8rem 0 4.5rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .stihl-hero .hero-overlay {
@@ -23,7 +27,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  width: 100%;
 }
 
 .stihl-hero-left { flex: 1 1 60%; color: #fff; text-shadow: 0 6px 20px rgba(0,0,0,0.6); }
@@ -61,6 +66,10 @@
   .stihl-hero-content { flex-direction: column; align-items: flex-start; }
   .stihl-hero-right { align-self: center; }
   .stihl-info-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 880px) {
+  .stihl-hero { min-height: 60vh; padding: 6rem 0 3rem; }
 }
 
 /* Orange modifier for STIHL CTA */
