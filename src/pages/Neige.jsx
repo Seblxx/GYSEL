@@ -38,14 +38,12 @@ export default function Neige() {
         <div className="neige-hero-overlay" />
         <div className="container neige-hero-content">
           <div className="logo-ineige ">
-            <img src="/ineige-web.png" alt="Logo ineige" />
+            <img src="/images/logo_ineige.png" alt="Logo ineige" />
           </div>
           <h1>{t("neige.hero.title")}</h1>
           <p>{t("neige.hero.desc")}</p>
 
-          <p>
-            <strong>{t("neige.hero.assurance")}</strong>
-          </p>
+          <p>{t("neige.hero.assurance")}</p>
           <div className="neige-hero-btns">
             <Link to="/contact" className="btn-primary-hiver">
               {t("neige.hero.cta")} <ArrowRight size={18} />
