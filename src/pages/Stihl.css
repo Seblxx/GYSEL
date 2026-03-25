@@ -59,12 +59,12 @@
 }
 
 .stihl-title {
-  color: #152423; /* match neige heading color tone */
+  color: #ff6600; /* make main title orange */
   font-size: 2.6rem;
   margin: 0;
-  letter-spacing: 0.4px;
-  font-family: var(--font-accent);
-  font-weight: 900;
+  letter-spacing: 0.2px;
+  font-family: var(--font-main);
+  font-weight: 800;
   text-transform: none;
   line-height: 1.05;
 }
@@ -94,7 +94,7 @@
   font-size: 1.25rem;
   margin-bottom: 1rem;
   text-align: center;
-  color: var(--text-dark);
+  color: #ff6600; /* make subtitle/lead text orange */
   font-family: var(--font-main);
   max-width: 760px;
 }
@@ -131,12 +131,14 @@
   font-weight: 700;
   font-size: 1.05rem;
   margin-bottom: 0.45rem;
+  font-family: var(--font-main);
 }
 
 .stihl-info-text {
   color: #2b3b3d;
   font-size: 1rem;
   margin: 0;
+  font-family: var(--font-main);
 }
 
 .stihl-contact {
@@ -160,7 +162,7 @@
   border-radius: 10px;
   padding: 0.85rem 1.6rem;
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 10px 30px rgba(255,102,0,0.18);
