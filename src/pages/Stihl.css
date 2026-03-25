@@ -1,75 +1,3 @@
-.stihl-btn {
-  margin-top: 2rem;
-  background: #ff6600;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  font-family: inherit;
-}
-
-.stihl-btn:hover {
-  background: #e65c00;
-}
-.stihl-content {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.stihl-info-block {
-  background: #fff3e6;
-  border-radius: 8px;
-  padding: 1.2rem 1.5rem;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stihl-info-title {
-  color: #ff6600;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
-}
-
-.stihl-info-text {
-  color: #ff6600;
-  font-size: 1.08rem;
-  text-align: center;
-  margin: 0;
-  font-family: inherit;
-}
-
-.stihl-highlight {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #ff6600;
-  text-align: center;
-  font-family: inherit;
-}
-.stihl-img {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-  margin-top: 3rem;
-  margin-bottom: 0.1rem;
-  display: block;
-}
-
 .stihl-page {
   background: #fff;
   color: #ff6600;
@@ -82,30 +10,198 @@
   font-family: inherit;
 }
 
-.stihl-page h1 {
-  color: #ff6600;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-family: inherit;
+/* Background image for the STIHL page */
+.stihl-page {
+  background-image: url('/tondeuse.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
+.stihl-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.55); /* lighter white wash so background appears more */
+  pointer-events: none;
+  backdrop-filter: blur(3px);
+}
+
+.stihl-container { position: relative; z-index: 2; }
+
+.stihl-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 3.25rem; /* extra top gap to avoid touching navbar */
+}
+
+.stihl-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.stihl-logo {
+  width: 84px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.stihl-logo-below {
+  margin-top: 8px;
+  width: 110px; /* slightly larger logo when placed below title */
+}
+
+.stihl-title {
+  color: #ff6600; /* make main title orange */
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-family: var(--font-main);
+  font-weight: 800;
+  text-transform: none;
+  line-height: 1.05;
+}
+
+@media (max-width: 640px) {
+  .stihl-logo-below { width: 92px; }
+  .stihl-title { font-size: 1.8rem; }
+}
+
+.stihl-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.stihl-hero-info {
+  padding: 1rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .stihl-desc {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
+  color: #ff6600; /* make subtitle/lead text orange */
+  font-family: var(--font-main);
+  max-width: 760px;
+}
+
+.stihl-cta-row {
+  margin-top: 1rem;
+}
+
+.stihl-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 820px;
+  margin: 1rem auto 0;
+  justify-items: center;
+}
+
+.stihl-cta-below {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem 0 2rem;
+}
+
+.stihl-info-block {
+  background: linear-gradient(180deg, #fff 0%, #fff3e6 100%);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(31,42,45,0.04);
+  text-align: center; /* center the text like the other card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stihl-info-title {
   color: #ff6600;
-  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-main);
+}
+
+.stihl-info-text {
+  color: #2b3b3d;
+  font-size: 1rem;
+  margin: 0;
+  font-family: var(--font-main);
 }
 
 .stihl-contact {
-  font-size: 1.1rem;
-  color: #ff6600;
+  font-size: 1.05rem;
+  color: var(--text-dark);
   text-align: center;
-  background: #fff3e6;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.08);
-  font-family: inherit;
+  font-family: var(--font-main);
+  margin: 0;
 }
+
+.stihl-btn {
+  margin-top: 0;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 30px rgba(255,102,0,0.18);
+}
+
+.stihl-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(255,102,0,0.22); }
+
+/* Make the embedded video more prominent */
+.stihl-video-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.stihl-video iframe {
+  width: 70vw; /* 30% smaller than full width */
+  max-width: 1400px;
+  aspect-ratio: 16/9;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 24px 72px rgba(31,42,45,0.28);
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .stihl-video iframe { width: 94vw; }
+}
+
+  .stihl-modal-video iframe {
+    width: 100%;
+    height: 60vh;
+    border-radius: 8px;
+  }
+
+@media (max-width: 880px) {
+  .stihl-hero { grid-template-columns: 1fr; }
+  .stihl-info-grid { grid-template-columns: 1fr; }
+  .stihl-modal-video iframe { height: 46vh; }
+}
+
