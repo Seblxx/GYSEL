@@ -11,7 +11,7 @@ export default function Services() {
     { img: '/1grassii.jpg', titleFr: 'Terreautage', titleEn: 'Top Dressing' },
     { img: '/1grassIII.jpg', titleFr: 'Hydro-ensemencement', titleEn: 'Hydro-seeding' },
     { img: '/1landscape.jpg', titleFr: 'Entretien et aménagement paysager', titleEn: 'Landscape Maintenance & Design' },
-    { img: '/1brightgrass.jpg', titleFr: 'Tondeuse Robot', titleEn: 'Robot Mower' },
+    { img: '/tondeuse.jpg', titleFr: 'Tondeuse Robot', titleEn: 'Robot Mower' },
     { img: '/1sky.jpg', titleFr: 'Nettoyage saisonnier', titleEn: 'Seasonal Cleanup' },
     { img: '/1tondeuse.jpg', titleFr: 'Tonte de pelouse', titleEn: 'Lawn Mowing' },
     { img: '/1parking.jpg', titleFr: 'Nettoyage de stationnement', titleEn: 'Parking Lot Cleaning' },
