@@ -42,6 +42,10 @@
       "cta": "Découvrir nos services"
     }
   },
+
+  "seeAll": {
+    "services": "Voir tous les services"
+  },
   "contact": {
     "title": "Nous joindre",
     "subtitle": "Obtenez une évaluation gratuite pour tous vos projets d'espaces verts.",
@@ -99,6 +103,16 @@
       "Équipe expérimentée",
       "Déglaçage inclus"
     ]
+    ,
+    "why": {
+      "title": "Pourquoi choisir iNeige ?",
+      "p": "Avec iNeige, bénéficiez de l'expertise du Groupe Gysel pour un hiver sans tracas. Notre équipe professionnelle s'occupe de tout pour que vous puissiez profiter de la saison."
+    },
+    "cta": {
+      "title": "Prêt pour l'hiver ?",
+      "desc": "Réservez votre forfait de déneigement dès maintenant et profitez d'un tarif préférentiel.",
+      "btn": "Demander un devis"
+    }
   },
   "services": {
     "title": "Nos Services",

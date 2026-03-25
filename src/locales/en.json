@@ -42,6 +42,10 @@
       "cta": "Discover our services"
     }
   },
+
+  "seeAll": {
+    "services": "See all services"
+  },
   "contact": {
     "title": "Contact us",
     "subtitle": "Get a free estimate for all your green space projects.",
@@ -99,6 +103,16 @@
       "Experienced team",
       "De-icing included"
     ]
+    ,
+    "why": {
+      "title": "Why choose iNeige?",
+      "p": "With iNeige, benefit from Groupe Gysel's expertise for a worry-free winter. Our professional team takes care of everything so you can enjoy the season."
+    },
+    "cta": {
+      "title": "Ready for winter?",
+      "desc": "Book your snow-removal package now and enjoy a preferential rate.",
+      "btn": "Request a quote"
+    }
   },
   "services": {
     "title": "Our Services",

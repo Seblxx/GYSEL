@@ -70,12 +70,8 @@ export default function Neige() {
       <section className="neige-advantages">
         <div className="container neige-adv-inner">
           <div className="neige-adv-text">
-            <h2>Pourquoi choisir iNeige ?</h2>
-            <p>
-              Avec iNeige, bénéficiez de l'expertise du Groupe Gysel pour un
-              hiver sans tracas. Notre équipe professionnelle s'occupe de tout
-              pour que vous puissiez profiter de la saison.
-            </p>
+            <h2>{t('neige.why.title') || 'Pourquoi choisir iNeige ?'}</h2>
+            <p>{t('neige.why.p') || `Avec iNeige, bénéficiez de l'expertise du Groupe Gysel pour un hiver sans tracas. Notre équipe professionnelle s'occupe de tout pour que vous puissiez profiter de la saison.`}</p>
             <ul className="neige-adv-list">
               {advantages.map((a, i) => (
                 <li key={i}>
@@ -97,13 +93,10 @@ export default function Neige() {
       <section className="neige-cta">
         <div className="container" style={{ textAlign: "center" }}>
           <Snowflake size={48} className="neige-cta-icon" />
-          <h2>Prêt pour l'hiver ?</h2>
-          <p>
-            Réservez votre forfait de déneigement dès maintenant et profitez
-            d'un tarif préférentiel.
-          </p>
+          <h2>{t('neige.cta.title') || 'Prêt pour l\'hiver ?'}</h2>
+          <p>{t('neige.cta.desc') || 'Réservez votre forfait de déneigement dès maintenant et profitez d\'un tarif préférentiel.'}</p>
           <Link to="/contact" className="btn-primary-hiver">
-            Demander un devis <ArrowRight size={18} />
+            {t('neige.cta.btn') || 'Demander un devis'} <ArrowRight size={18} />
           </Link>
         </div>
       </section>

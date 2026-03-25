@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
             <Link to="/services" className="btn-secondary">
-              Voir tous les services <ArrowRight size={18} />
+              {t('seeAll.services') || 'Voir tous les services'} <ArrowRight size={18} />
             </Link>
           </div>
         </div>
