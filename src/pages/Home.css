@@ -72,59 +72,86 @@
 
 /* ===== INTRO ===== */
 .intro {
-  padding: 100px 0;
-}
-
-.intro-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.intro-text p {
-  color: var(--gray);
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-}
-
-.intro-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.intro-card {
-  background: var(--green-bg);
-  border-radius: 16px;
-  padding: 28px;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  gap: 20px;
-  transition: all 0.3s ease;
+  justify-content: center;
+  background: url('/plants%20homepage.jpg') center/cover no-repeat;
+  overflow: hidden;
 }
 
-.intro-card:hover {
-  transform: translateX(8px);
-  box-shadow: 0 8px 30px rgba(58,107,46,0.15);
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 30, 20, 0.85), rgba(20, 40, 30, 0.75));
+  z-index: 1;
 }
 
-.intro-card svg {
+.intro-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  max-width: 900px;
+  padding: 100px 24px;
+}
+
+.intro-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.intro-badge img {
+  height: auto;
+  width: 280px;
+  max-width: 100%;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+  margin-left: 20px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-intro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
   color: var(--green-main);
-  flex-shrink: 0;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
-.intro-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
+.btn-intro:hover {
+  background: var(--green-bg);
   color: var(--green-dark);
-  margin-bottom: 4px;
-}
-
-.intro-card p {
-  font-size: 0.9rem;
-  color: var(--gray);
-  margin: 0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,255,255,0.3);
 }
 
 /* ===== HIGHLIGHTS ===== */
@@ -266,9 +293,14 @@
   .hero-content {
     padding: 160px 24px 80px;
   }
-  .intro-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .intro-title {
+    font-size: 2rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+  .intro-badge img {
+    width: 150px;
   }
   .highlights-grid {
     grid-template-columns: 1fr;

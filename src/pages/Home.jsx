@@ -1,16 +1,39 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Leaf, Droplets, Scissors, Snowflake, Star, Shield, Clock } from 'lucide-react'
+import { ArrowRight, Leaf, Droplets, Scissors, Snowflake } from 'lucide-react'
 import './Home.css'
 import { useLanguage } from '../contexts/LanguageContext'
+
+const defaultHighlights = [
+  {
+    icon: <Leaf size={32} />,
+    title: 'Traitement de pelouse',
+    desc: 'Un gazon vert et en santé grâce à nos traitements spécialisés.',
+  },
+  {
+    icon: <Droplets size={32} />,
+    title: 'Hydro-ensemencement',
+    desc: '3x moins cher que la tourbe. La clé du gazon parfait.',
+  },
+  {
+    icon: <Scissors size={32} />,
+    title: 'Tonte & Entretien',
+    desc: 'Tonte hebdomadaire et entretien paysager professionnel.',
+  },
+  {
+    icon: <Snowflake size={32} />,
+    title: 'Déneigement iNeige',
+    desc: 'Pelleter est une chose du passé. Découvrez iNeige.',
+  },
+]
 
 export default function Home() {
   const { t } = useLanguage()
 
-  const highlights = (t('home.highlights') || []).map((h, i) => ({
-    icon: [<Leaf size={32} />, <Droplets size={32} />, <Scissors size={32} />, <Snowflake size={32} />][i] || <Leaf size={32} />,
-    title: h.title,
-    desc: h.desc,
-  }))
+  const icons = [<Leaf size={32} />, <Droplets size={32} />, <Scissors size={32} />, <Snowflake size={32} />]
+  const localeHighlights = t('home.highlights') || []
+  const highlights = (localeHighlights.length > 0)
+    ? localeHighlights.map((h, i) => ({ icon: icons[i] || <Leaf size={32} />, title: h.title, desc: h.desc }))
+    : defaultHighlights
 
   const stats = t('home.stats') || []
 
@@ -37,32 +60,26 @@ export default function Home() {
 
       {/* INTRO */}
       <section className="intro">
-        <div className="container intro-inner">
-          <div className="intro-text">
-            <h2 className="section-title">{t('services.title') /* reuse services title */}</h2>
-            <p>{t('services.desc')}</p>
-            <p>{/* keep empty or additional copy could go here */}</p>
-            <Link to="/services" className="btn-primary" style={{ marginTop: 24 }}>
-              {t('home.hero.cta1')}
-            </Link>
+        <div className="intro-overlay" />
+        <div className="container intro-content">
+          <div className="intro-badge">
+            <img src="/estrie.png" alt="LE #1 EN ESTRIE" />
           </div>
-          <div className="intro-visual">
-            <div className="intro-card">
-              <Shield size={40} />
-              <h3>Professionnalisme</h3>
-              <p>Des experts certifiés à votre service</p>
-            </div>
-            <div className="intro-card">
-              <Star size={40} />
-              <h3>Qualité</h3>
-              <p>Des résultats qui dépassent vos attentes</p>
-            </div>
-            <div className="intro-card">
-              <Clock size={40} />
-              <h3>Fiabilité</h3>
-              <p>Ponctualité et service régulier garanti</p>
-            </div>
-          </div>
+          <h2 className="intro-title">Spécialiste en espaces verts.</h2>
+          <p className="intro-text">
+            Depuis sa création, Le Groupe Gysel est reconnu pour ses services de qualité,
+            son efficacité exceptionnelle et son professionnalisme sans pareil. Quel que soit
+            le service que vous recherchez et vos attentes, avec nous vous aurez la garantie
+            d'une entière satisfaction.
+          </p>
+          <p className="intro-text">
+            Notre équipe est prête à répondre à toutes les demandes,
+            et gère chaque projet avec le professionnalisme attendu
+            par nos clients.
+          </p>
+          <Link to="/services" className="btn-intro">
+            Découvrir nos services
+          </Link>
         </div>
       </section>
 
@@ -87,18 +104,6 @@ export default function Home() {
               Voir tous les services <ArrowRight size={18} />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* STATS */}
-      <section className="stats">
-        <div className="container stats-grid">
-          {stats.map((s, i) => (
-            <div key={i} className="stat-item">
-              <span className="stat-number">{s.number}</span>
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 
