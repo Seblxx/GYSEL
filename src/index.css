@@ -81,8 +81,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
 
 .btn-secondary {
   display: inline-block;
-  background: transparent;
-  color: var(--white);
+  background: var(--white);
+  color: var(--green-main);
   padding: 14px 32px;
   border-radius: 50px;
   font-weight: 600;
@@ -91,8 +91,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
   border: 2px solid var(--white);
 }
 .btn-secondary:hover {
-  background: var(--white);
-  color: var(--green-main);
+  background: transparent;
+  color: var(--white);
   transform: translateY(-2px);
 }
 

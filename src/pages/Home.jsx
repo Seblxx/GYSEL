@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Leaf, Droplets, Scissors, Snowflake } from 'lucide-react'
+import { ArrowRight, Leaf, Droplets, Scissors, Snowflake, ChevronLeft, ChevronRight } from 'lucide-react'
 import './Home.css'
 import { useLanguage } from '../contexts/LanguageContext'
 
@@ -27,7 +27,7 @@ const defaultHighlights = [
 ]
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
 
   const icons = [<Leaf size={32} />, <Droplets size={32} />, <Scissors size={32} />, <Snowflake size={32} />]
   const localeHighlights = t('home.highlights') || []
@@ -40,7 +40,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <video className="hero-video" autoPlay loop muted playsInline>
-          <source src="/79998-570766625_medium.mp4" type="video/mp4" />
+          <source src="/GYSEL%20HOMEII.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay" />
         <div className="hero-content container">
@@ -52,6 +52,14 @@ export default function Home() {
             <Link to="/contact" className="btn-secondary">
               {t('home.hero.cta2')}
             </Link>
+          </div>
+          <div className="hero-partners">
+            <p className="partners-title">{lang === 'fr' ? 'Ils nous font confiance' : 'They trust us'}</p>
+            <div className="partners-logos">
+              <img src="/COSTCO LOGO.png" alt="Costco" className="partner-logo" />
+              <img src="/IMMEX.png" alt="Immex" className="partner-logo partner-logo-immex" />
+              <img src="/ROYER.png" alt="Royer" className="partner-logo" />
+            </div>
           </div>
         </div>
       </section>
@@ -92,6 +100,102 @@ export default function Home() {
             <Link to="/services" className="btn-secondary">
               {t('seeAll.services') || 'Voir tous les services'} <ArrowRight size={18} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="testimonials">
+        <div className="container">
+          <h2 className="section-title">{lang === 'fr' ? 'Ce que disent nos clients' : 'What our clients say'}</h2>
+          <p className="section-subtitle">{lang === 'fr' ? 'La satisfaction de nos clients est notre priorité' : 'Our clients\' satisfaction is our priority'}</p>
+          
+          <div className="testimonials-carousel">
+            <button className="carousel-arrow carousel-arrow-left" onClick={() => { const track = document.querySelector('.testimonials-track'); track.scrollBy({ left: -400, behavior: 'smooth' }) }}>
+              <ChevronLeft size={24} />
+            </button>
+            <div className="testimonials-track">
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr' 
+                    ? '"Service exceptionnel! Notre pelouse n\'a jamais été aussi belle. L\'équipe est professionnelle et ponctuelle."'
+                    : '"Exceptional service! Our lawn has never looked better. The team is professional and punctual."'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Marie Dubois</strong>
+                  <span>{lang === 'fr' ? 'Cliente résidentielle' : 'Residential Client'}</span>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr'
+                    ? '"Le terreautage et l\'hydro-ensemencement ont transformé notre terrain. Résultats impressionnants!"'
+                    : '"The top dressing and hydro-seeding transformed our property. Impressive results!"'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Jean Tremblay</strong>
+                  <span>{lang === 'fr' ? 'Client commercial' : 'Commercial Client'}</span>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr'
+                    ? '"Excellent rapport qualité-prix. Je recommande fortement Le Groupe Gysel pour tous vos besoins en entretien paysager."'
+                    : '"Excellent value for money. I highly recommend Le Groupe Gysel for all your landscaping needs."'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Sophie Bergeron</strong>
+                  <span>{lang === 'fr' ? 'Cliente résidentielle' : 'Residential Client'}</span>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr'
+                    ? '"Depuis que Le Groupe Gysel s\'occupe de notre terrain, nous recevons des compliments de tous nos voisins!"'
+                    : '"Since Le Groupe Gysel started taking care of our property, we receive compliments from all our neighbors!"'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Pierre Lavoie</strong>
+                  <span>{lang === 'fr' ? 'Client résidentiel' : 'Residential Client'}</span>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr'
+                    ? '"La tondeuse robot a changé notre vie! Plus besoin de tondre et le résultat est impeccable toute la saison."'
+                    : '"The robot mower changed our lives! No more mowing and the result is flawless all season long."'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Isabelle Côté</strong>
+                  <span>{lang === 'fr' ? 'Cliente résidentielle' : 'Residential Client'}</span>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p className="testimonial-text">
+                  {lang === 'fr'
+                    ? '"Équipe fiable et travail soigné. Le nettoyage de notre stationnement commercial est toujours parfait."'
+                    : '"Reliable team and meticulous work. Our commercial parking lot cleaning is always perfect."'}
+                </p>
+                <div className="testimonial-author">
+                  <strong>Marc-André Roy</strong>
+                  <span>{lang === 'fr' ? 'Client commercial' : 'Commercial Client'}</span>
+                </div>
+              </div>
+            </div>
+            <button className="carousel-arrow carousel-arrow-right" onClick={() => { const track = document.querySelector('.testimonials-track'); track.scrollBy({ left: 400, behavior: 'smooth' }) }}>
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </section>
