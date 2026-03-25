@@ -63,7 +63,8 @@
 }
 
 @media (max-width: 880px) {
-  .stihl-hero-content { flex-direction: column; align-items: flex-start; }
+  .stihl-hero-content { flex-direction: column; align-items: center; }
+  .stihl-hero-left { width: 100%; text-align: center; }
   .stihl-hero-right { align-self: center; }
   .stihl-info-grid { grid-template-columns: 1fr; }
 }
