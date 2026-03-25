@@ -8,8 +8,17 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+.footer-stihl {
+  background-color: #ff5f15;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 .footer-hiver .footer-socials a:hover {
   background: #3a7a8a;
+}
+
+.footer-stihl .footer-socials a:hover {
+  background: #e65000;
 }
 
 .footer-top {

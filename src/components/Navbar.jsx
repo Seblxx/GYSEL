@@ -25,9 +25,14 @@ export default function Navbar() {
   ]
 
   const isHiver = pathname === '/ineige'
+  const isStihl = pathname === '/stihl'
+  const isHome = pathname === '/'
+  
+  // For non-home pages, always show scrolled state
+  const showScrolled = isHome ? scrolled : true
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isHiver ? 'navbar-hiver' : ''}`}>
+    <nav className={`navbar ${showScrolled ? 'scrolled' : ''} ${isHiver ? 'navbar-hiver' : ''} ${isStihl ? 'navbar-stihl' : ''}`}>
       <div className="navbar-inner container">
         {/* Centered logo text - only visible before scroll */}
         <div className="navbar-center-logo">

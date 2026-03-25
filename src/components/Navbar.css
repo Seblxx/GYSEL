@@ -20,16 +20,29 @@
   background: rgba(26,79,90,0.95);
 }
 
+.navbar-stihl.scrolled {
+  background: rgba(255,95,21,0.95);
+}
+
 .navbar-hiver .btn-phone {
   background-color: #3a7a8a;
+}
+
+.navbar-stihl .btn-phone {
+  background-color: #ff5f15;
 }
 
 .navbar-hiver .btn-phone:hover {
   background-color: #1f5d69;
 }
 
-.navbar-hiver {
-  padding: 130px 0;
+.navbar-stihl .btn-phone:hover {
+  background-color: #e65000;
+}
+
+.navbar-hiver,
+.navbar-stihl {
+  padding: 12px 0;
 }
 
 .navbar-inner {
@@ -158,6 +171,10 @@
 
   .navbar-hiver {
     background: #1a4f5a;
+  }
+
+  .navbar-stihl {
+    background: #ff5f15;
   }
 
   .navbar-center-logo {

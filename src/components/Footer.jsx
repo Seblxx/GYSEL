@@ -5,9 +5,10 @@ import "./Footer.css";
 export default function Footer() {
   const { pathname } = useLocation();
   const isHiver = pathname === "/ineige";
+  const isStihl = pathname === "/stihl";
 
   return (
-    <footer className={`footer ${isHiver ? "footer-hiver" : ""}`}>
+    <footer className={`footer ${isHiver ? "footer-hiver" : ""} ${isStihl ? "footer-stihl" : ""}`}>
       <div className="footer-top">
         <div className="container footer-grid">
           <div className="footer-brand">
