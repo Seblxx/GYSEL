@@ -73,17 +73,71 @@
 }
 
 /* ===== FEATURES ===== */
-.neige-features {
-  padding: 100px 0;
+.gallery-section-hiver {
+  padding: 0;
+  background: var(--white);
 }
 
-.neige-features .container {
+.gallery-section-hiver .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 100%;
+  margin: 0;
+  width: 100vw;
+}
+
+.gallery-section-hiver .gallery-item {
+  position: relative;
+  aspect-ratio: 1.2;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.gallery-section-hiver .gallery-item:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.gallery-section-hiver .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none;
+}
+
+.gallery-section-hiver .gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: background 0.3s ease;
+}
+
+.gallery-section-hiver .gallery-overlay h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
   text-align: center;
+}
+
+.gallery-section-hiver .gallery-item:hover .gallery-overlay {
+  background: rgba(26, 79, 90, 0.6);
 }
 
 .neige-features-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .section-title-hiver {
@@ -100,55 +154,10 @@
   margin: auto;
 }
 
-.neige-features-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.neige-feature-card {
-  background: var(--white);
-  border: 1px solid #e8e8e8;
-  border-radius: 20px;
-  padding: 40px 28px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.neige-feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(26, 58, 74, 0.12);
-  border-color: #3a7a8a;
-}
-
-.neige-feature-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #1a3a4a, #3a7a8a);
+.btn-soumission-hiver {
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: var(--white);
-  margin: 0 auto 20px;
-}
-
-.neige-feature-card h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a3a4a;
-  margin-bottom: 10px;
-}
-
-.neige-feature-card p {
-  color: var(--gray);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.feature-btn {
-  display: inline-block;
-  margin-top: 25px;
+  margin: 25px 0;
 }
 
 /* ===== ADVANTAGES ===== */
@@ -253,14 +262,22 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .neige-features-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  .gallery-section-hiver .gallery-overlay h3 {
+    font-size: 1.1rem;
   }
+
+  .gallery-section-hiver .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
   .neige-adv-inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .neige-adv-list {
     grid-template-columns: 1fr;
   }
@@ -282,8 +299,25 @@
   .neige-hero h1 {
     font-size: 2.5rem;
   }
+
   .neige-adv-text h2,
   .neige-cta h2 {
     font-size: 1.8rem;
+  }
+
+  .gallery-section-hiver .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallery-section-hiver .gallery-overlay h3 {
+    font-size: 0.95rem;
+  }
+
+  .section-title-hiver {
+    font-size: 2rem;
+  }
+
+  .section-subtitle-hiver {
+    font-size: 1rem;
   }
 }
