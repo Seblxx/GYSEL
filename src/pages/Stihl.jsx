@@ -12,16 +12,13 @@ export default function Stihl() {
     <div className="stihl-page">
       <div className="stihl-container">
         <div className="stihl-top">
-          <img src="/stihl.png" alt="STIHL" className="stihl-logo" />
           <h1 className="stihl-title">{t('stihl.title')}</h1>
+          <img src="/stihl.png" alt="STIHL" className="stihl-logo stihl-logo-below" />
         </div>
 
         <div className="stihl-hero">
           <div className="stihl-hero-info">
             <p className="stihl-desc">{t('stihl.highlight')}</p>
-            <div className="stihl-cta-row">
-              <button className="stihl-btn" onClick={() => navigate('/contact')}>{t('stihl.btn')}</button>
-            </div>
           </div>
         </div>
 
@@ -36,6 +33,9 @@ export default function Stihl() {
               <p className="stihl-contact">{t('stihl.contactDesc')}</p>
             </div>
           </div>
+        </div>
+        <div className="stihl-cta-below">
+          <button className="stihl-btn" onClick={() => navigate('/contact')}>{t('stihl.btn')}</button>
         </div>
         <div className="stihl-video-wrap">
           <div className="stihl-video">

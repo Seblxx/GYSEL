@@ -35,13 +35,16 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
+  padding-top: 3.25rem; /* extra top gap to avoid touching navbar */
 }
 
 .stihl-top {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .stihl-logo {
@@ -50,13 +53,25 @@
   opacity: 0.95;
 }
 
+.stihl-logo-below {
+  margin-top: 8px;
+  width: 110px; /* slightly larger logo when placed below title */
+}
+
 .stihl-title {
-  color: var(--text-dark);
-  font-size: 2.4rem;
+  color: #152423; /* match neige heading color tone */
+  font-size: 2.6rem;
   margin: 0;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   font-family: var(--font-accent);
-  font-weight: 800;
+  font-weight: 900;
+  text-transform: none;
+  line-height: 1.05;
+}
+
+@media (max-width: 640px) {
+  .stihl-logo-below { width: 92px; }
+  .stihl-title { font-size: 1.8rem; }
 }
 
 .stihl-hero {
@@ -96,6 +111,12 @@
   max-width: 820px;
   margin: 1rem auto 0;
   justify-items: center;
+}
+
+.stihl-cta-below {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem 0 2rem;
 }
 
 .stihl-info-block {
