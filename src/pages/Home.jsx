@@ -35,8 +35,6 @@ export default function Home() {
     ? localeHighlights.map((h, i) => ({ icon: icons[i] || <Leaf size={32} />, title: h.title, desc: h.desc }))
     : defaultHighlights
 
-  const stats = t('home.stats') || []
-
   return (
     <div className="home">
       {/* HERO */}
@@ -48,7 +46,7 @@ export default function Home() {
         <div className="hero-content container">
           <p className="hero-quote">{t('home.hero.quote')}</p>
           <div className="hero-btns">
-            <Link to="/services" className="btn-primary">
+            <Link to="/services" className="btn-secondary">
               {t('home.hero.cta1')} <ArrowRight size={18} />
             </Link>
             <Link to="/contact" className="btn-secondary">

@@ -74,7 +74,7 @@ export default function Navbar() {
           <li className="nav-cta">
             <a href={`tel:${t('phone')}`} className="btn-phone">
               <Phone size={16} />
-              {t('phone')}
+              {lang === 'fr' ? 'Appelez-nous' : 'Call us'}
             </a>
           </li>
         </ul>
