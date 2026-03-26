@@ -10,6 +10,10 @@ export default function Stihl() {
   return (
     <div className="stihl-page">
       <section className="stihl-hero">
+        <video className="stihl-hero-video" autoPlay muted loop playsInline>
+          <source src="/stihlvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="hero-overlay" />
         <div className="container stihl-hero-content">
           <div className="stihl-hero-left">
