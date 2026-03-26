@@ -282,6 +282,15 @@
   max-width: 100%;
 }
 
+/* Allow grid children to shrink below their content size to avoid forcing overflow */
+.contact-grid > *,
+.contact-form-section,
+.contact-info-section,
+.form-group,
+.contact-info-card {
+  min-width: 0;
+}
+
 .contact-map iframe {
   display: block;
   max-width: 100%;
@@ -298,4 +307,32 @@
   .contact-grid > .contact-form-section,
   .contact-grid > .contact-info-section { padding: 0; }
   .contact-info-card { padding: 20px; }
+}
+
+/* Page-level and content safeguards to prevent horizontal overflow on small screens */
+.contact-page {
+  overflow-x: hidden;
+}
+
+/* Break long words/URLs and allow wrapping where necessary */
+.contact-info-list p,
+.contact-info-list a,
+.contact-socials a,
+.contact-form * {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Allow social buttons to wrap/shrink on narrow screens */
+.contact-socials {
+  flex-wrap: wrap;
+}
+
+.contact-socials a {
+  flex-shrink: 1;
+  white-space: normal;
+}
+
+@media (max-width: 600px) {
+  .submit-btn { padding: 12px 18px; }
 }
