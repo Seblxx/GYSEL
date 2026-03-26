@@ -225,6 +225,7 @@
 
   .navbar-links.open {
     transform: translateX(0);
+    pointer-events: all;
   }
 
   .navbar-links a {
