@@ -174,7 +174,7 @@
   .navbar {
     background: var(--green-dark);
     right: 0;
-    padding: 100px 0;
+    padding: 12px 0;
   }
 
   .navbar-hiver {
@@ -202,14 +202,14 @@
 
   .navbar-links {
     position: fixed;
-    top: 70px;
+    top: 64px;
     left: 0;
     right: 0;
     background: var(--green-dark);
     flex-direction: column;
     justify-content: flex-start;
-    padding: 32px 24px;
-    gap: 30px;
+    padding: 24px 20px;
+    gap: 24px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     opacity: 1;
