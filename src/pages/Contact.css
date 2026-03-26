@@ -235,3 +235,67 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile adjustments: center content and disable fixed background */
+@media (max-width: 920px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .contact-content {
+    background-attachment: scroll;
+  }
+
+  .contact-grid > .contact-form-section,
+  .contact-grid > .contact-info-section {
+    width: 100%;
+    max-width: 820px;
+    box-sizing: border-box;
+  }
+
+  .contact-info-card,
+  .contact-map,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* Additional safeguards against horizontal overflow */
+.contact-content {
+  background-attachment: scroll;
+}
+
+.contact-grid {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-grid > * {
+  box-sizing: border-box;
+}
+
+.contact-info-card,
+.contact-map,
+.contact-form-section,
+.contact-info-section {
+  max-width: 100%;
+}
+
+.contact-map iframe {
+  display: block;
+  max-width: 100%;
+}
+
+.submit-btn {
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+@media (max-width: 600px) {
+  .contact-grid { gap: 20px; padding: 0 8px; }
+  .contact-grid > .contact-form-section,
+  .contact-grid > .contact-info-section { padding: 0; }
+  .contact-info-card { padding: 20px; }
+}
