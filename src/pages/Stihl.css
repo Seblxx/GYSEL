@@ -42,13 +42,38 @@
   width: 100%;
 }
 
-.stihl-hero-left { flex: 1 1 60%; color: #fff; text-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+.stihl-hero-left { flex: 1 1 60%; color: #fff; text-shadow: 0 6px 20px rgba(0,0,0,0.6); position: relative; }
 .stihl-hero-right { flex: 0 0 180px; display:flex; align-items:center; justify-content:center; z-index:3; }
 
 /* Make the overlay non-blocking so buttons/links are clickable */
 .stihl-hero .hero-overlay { z-index:1; pointer-events: none; }
 
 .stihl-logo { width: 140px; height: auto; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.5)); }
+
+/* Overlapping logo placed above the hero title */
+.stihl-logo-overlap {
+  position: absolute;
+  left: 0.3%;
+  transform: none;
+  top: -6px;
+  width: 140px;
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.stihl-title { padding-top: 56px; }
+
+@media (max-width: 880px) {
+  .stihl-logo-overlap {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -4px;
+    width: 120px;
+  }
+
+  .stihl-title { padding-top: 48px; }
+}
 
 .stihl-title { color: #fff; font-size: 2.4rem; margin: 0 0 0.5rem 0; font-weight: 800; }
 .stihl-desc { color: rgba(255,255,255,0.92); font-size: 1.1rem; margin: 0 0 1rem 0; max-width: 720px; }

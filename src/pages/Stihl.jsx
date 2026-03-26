@@ -17,14 +17,12 @@ export default function Stihl() {
         <div className="hero-overlay" />
         <div className="container stihl-hero-content">
           <div className="stihl-hero-left">
+            <img src="/stihl.png" alt="STIHL" className="stihl-logo-overlap" />
             <h1 className="stihl-title">{t('stihl.title')}</h1>
             <p className="stihl-desc">{t('stihl.highlight')}</p>
             <div className="hero-cta">
               <button className="btn-primary btn-orange" onClick={() => navigate('/contact')}>{t('stihl.btn')}</button>
             </div>
-          </div>
-          <div className="stihl-hero-right">
-            <img src="/stihl.png" alt="STIHL" className="stihl-logo" />
           </div>
         </div>
       </section>
